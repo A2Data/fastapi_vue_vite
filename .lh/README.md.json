@@ -1,0 +1,90 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1697693407036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697693412403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,6 @@\n ## Recommended IDE Setup\n \n - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n \n+\n+## a\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693417717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,5 @@\n \n - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n \n \n-## a\n\\ No newline at end of file\n+## 按照\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693432447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,5 @@\n \n - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n \n \n-## 按照\n\\ No newline at end of file\n+## 按照 Vite 官网初始化项目，并删除一些无关文件\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693438513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,6 @@\n \n - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n \n \n-## 按照 Vite 官网初始化项目，并删除一些无关文件\n\\ No newline at end of file\n+## 按照 Vite 官网初始化项目，并删除一些无关文件\n+\n"
+                },
+                {
+                    "date": 1697693460166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,13 @@\n \n \n ## 按照 Vite 官网初始化项目，并删除一些无关文件\n \n+```bash\n+# 使用 npm\n+npm create vite@latest\n+\n+# 使用 yarn\n+yarn create vite\n+# 使用 pnpm\n+pnpm create vite\n+```\n"
+                },
+                {
+                    "date": 1697693466796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,4 +17,7 @@\n yarn create vite\n # 使用 pnpm\n pnpm create vite\n ```\n+\n+\n+## \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693504889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,13 @@\n # 使用 yarn\n yarn create vite\n # 使用 pnpm\n pnpm create vite\n+\n+\n+cd fastapi_vue_vite\n+npm install # or pnpm install\n+npm run dev # or pnpm run dev\n ```\n \n \n ## \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693519048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n yarn create vite\n # 使用 pnpm\n pnpm create vite\n \n-\n+# 进入项目 安装依赖且运行项目\n cd fastapi_vue_vite\n npm install # or pnpm install\n npm run dev # or pnpm run dev\n ```\n"
+                },
+                {
+                    "date": 1697693526455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,5 +24,6 @@\n npm run dev # or pnpm run dev\n ```\n \n \n+\n ## \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693535275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,7 +23,11 @@\n npm install # or pnpm install\n npm run dev # or pnpm run dev\n ```\n \n+访问地址：\n+http://localhost:5173/\n \n \n+\n+\n ## \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693550449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+# Vue 3 + Vite\n+\n+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.\n+\n+## Recommended IDE Setup\n+\n+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n+\n+\n+## 按照 Vite 官网初始化项目，并删除一些无关文件\n+\n+```bash\n+# 使用 npm\n+npm create vite@latest\n+\n+# 使用 yarn\n+yarn create vite\n+# 使用 pnpm\n+pnpm create vite\n+\n+# 进入项目 安装依赖且运行项目\n+cd fastapi_vue_vite\n+npm install # or pnpm install\n+npm run dev # or pnpm run dev\n+```\n+\n+访问地址：\n+http://localhost:5173/\n+\n+\n+![image.png](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n+\n+## \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693739228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,40 +27,9 @@\n 访问地址：\n http://localhost:5173/\n \n \n-![image.png](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n+![效果](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n \n-## \n-# Vue 3 + Vite\n+## 初始化项目\n \n-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.\n-\n-## Recommended IDE Setup\n-\n-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n-\n-\n-## 按照 Vite 官网初始化项目，并删除一些无关文件\n-\n-```bash\n-# 使用 npm\n-npm create vite@latest\n-\n-# 使用 yarn\n-yarn create vite\n-# 使用 pnpm\n-pnpm create vite\n-\n-# 进入项目 安装依赖且运行项目\n-cd fastapi_vue_vite\n-npm install # or pnpm install\n-npm run dev # or pnpm run dev\n-```\n-\n-访问地址：\n-http://localhost:5173/\n-\n-\n-\n\\ No newline at end of file\n-\n-## \n+删除一些\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693746702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,5 @@\n ![效果](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n \n ## 初始化项目\n \n-删除一些\n\\ No newline at end of file\n+删除一些无关文件\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693856731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,4 @@\n ![效果](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n \n ## 初始化项目\n \n-删除一些无关文件\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697693872011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,6 @@\n \n ![效果](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n \n ## 初始化项目\n-\n+- 配置环境\n+- \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697694196741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,7 +29,4 @@\n \n \n ![效果](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n \n-## 初始化项目\n-- 配置环境\n-- \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697694204026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,9 @@\n 访问地址：\n http://localhost:5173/\n \n \n+\n ![效果](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n \n+\n+初始化项目完成。\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697694228317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n \n \n-## 按照 Vite 官网初始化项目，并删除一些无关文件\n+## 按照 Vite 官网初始化项目\n \n ```bash\n # 使用 npm\n npm create vite@latest\n"
+                }
+            ],
+            "date": 1697693407036,
+            "name": "Commit-0",
+            "content": "# Vue 3 + Vite\n\nThis template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.\n\n## Recommended IDE Setup\n\n- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n\n"
+        }
+    ]
+}
