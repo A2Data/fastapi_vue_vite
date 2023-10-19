@@ -1,0 +1,38 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1697722730662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697724109659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,22 @@\n   \"devDependencies\": {\n     \"@vitejs/plugin-vue\": \"^4.2.3\",\n     \"vite\": \"^4.4.5\",\n     \"dotenv\": \"^16.3.1\",\n+    \"@iconify/utils\": \"^2.1.11\",\n+    \"@unocss/preset-rem-to-px\": \"^0.56.0\",\n+    \"@vueuse/core\": \"^10.4.1\",\n+    \"axios\": \"^1.5.0\",\n+    \"echarts\": \"^5.4.3\",\n+    \"lodash-es\": \"^4.17.21\",\n+    \"naive-ui\": \"^2.34.4\",\n+    \"pinia\": \"^2.1.6\",\n+    \"pinia-plugin-persistedstate\": \"^3.2.0\",\n+    \"sass\": \"^1.67.0\",\n+    \"unocss\": \"^0.56.0\",\n+    \"unplugin-auto-import\": \"^0.16.6\",\n+    \"unplugin-vue-components\": \"^0.25.2\",\n+    \"vue\": \"^3.3.4\",\n+    \"vue-echarts\": \"^6.6.1\",\n+    \"vue-router\": \"^4.2.4\"\n   }\n }\n"
+                },
+                {
+                    "date": 1697725981297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,6 +30,7 @@\n     \"unplugin-vue-components\": \"^0.25.2\",\n     \"vue\": \"^3.3.4\",\n     \"vue-echarts\": \"^6.6.1\",\n     \"vue-router\": \"^4.2.4\"\n+    \"rollup-plugin-visualizer\": \"^5.9.2\",\n   }\n }\n"
+                },
+                {
+                    "date": 1697726003842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+{\n+  \"name\": \"fastapi_vue_vite\",\n+  \"private\": true,\n+  \"version\": \"0.0.0\",\n+  \"type\": \"module\",\n+  \"scripts\": {\n+    \"dev\": \"vite\",\n+    \"build\": \"vite build\",\n+    \"preview\": \"vite preview\"\n+  },\n+  \"dependencies\": {\n+    \"vue\": \"^3.3.4\"\n+  },\n+  \"devDependencies\": {\n+    \"@vitejs/plugin-vue\": \"^4.2.3\",\n+    \"vite\": \"^4.4.5\",\n+    \"dotenv\": \"^16.3.1\",\n+    \"@iconify/utils\": \"^2.1.11\",\n+    \n+    \"rollup-plugin-visualizer\": \"^5.9.2\"\n+  }\n+}\n"
+                },
+                {
+                    "date": 1697726013816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,37 +8,9 @@\n     \"build\": \"vite build\",\n     \"preview\": \"vite preview\"\n   },\n   \"dependencies\": {\n-    \"vue\": \"^3.3.4\"\n-  },\n-  \"devDependencies\": {\n-    \"@vitejs/plugin-vue\": \"^4.2.3\",\n-    \"vite\": \"^4.4.5\",\n-    \"dotenv\": \"^16.3.1\",\n-    \"@iconify/utils\": \"^2.1.11\",\n-    \n-    \"rollup-plugin-visualizer\": \"^5.9.2\"\n-  }\n-}\n-{\n-  \"name\": \"fastapi_vue_vite\",\n-  \"private\": true,\n-  \"version\": \"0.0.0\",\n-  \"type\": \"module\",\n-  \"scripts\": {\n-    \"dev\": \"vite\",\n-    \"build\": \"vite build\",\n-    \"preview\": \"vite preview\"\n-  },\n-  \"dependencies\": {\n-    \"vue\": \"^3.3.4\"\n-  },\n-  \"devDependencies\": {\n-    \"@vitejs/plugin-vue\": \"^4.2.3\",\n-    \"vite\": \"^4.4.5\",\n-    \"dotenv\": \"^16.3.1\",\n-    \"@iconify/utils\": \"^2.1.11\",\n+    \"vue\": \"^3.3.4\",\n     \"@unocss/preset-rem-to-px\": \"^0.56.0\",\n     \"@vueuse/core\": \"^10.4.1\",\n     \"axios\": \"^1.5.0\",\n     \"echarts\": \"^5.4.3\",\n@@ -49,10 +21,16 @@\n     \"sass\": \"^1.67.0\",\n     \"unocss\": \"^0.56.0\",\n     \"unplugin-auto-import\": \"^0.16.6\",\n     \"unplugin-vue-components\": \"^0.25.2\",\n-    \"vue\": \"^3.3.4\",\n     \"vue-echarts\": \"^6.6.1\",\n-    \"vue-router\": \"^4.2.4\"\n-    \"rollup-plugin-visualizer\": \"^5.9.2\",\n+    \"vue-router\": \"^4.2.4\",\n+  },\n+  \"devDependencies\": {\n+    \"@vitejs/plugin-vue\": \"^4.2.3\",\n+    \"vite\": \"^4.4.5\",\n+    \"dotenv\": \"^16.3.1\",\n+    \"@iconify/utils\": \"^2.1.11\",\n+    \n+    \"rollup-plugin-visualizer\": \"^5.9.2\"\n   }\n }\n"
+                },
+                {
+                    "date": 1697726028911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,15 +22,14 @@\n     \"unocss\": \"^0.56.0\",\n     \"unplugin-auto-import\": \"^0.16.6\",\n     \"unplugin-vue-components\": \"^0.25.2\",\n     \"vue-echarts\": \"^6.6.1\",\n-    \"vue-router\": \"^4.2.4\",\n+    \"vue-router\": \"^4.2.4\"\n   },\n   \"devDependencies\": {\n     \"@vitejs/plugin-vue\": \"^4.2.3\",\n     \"vite\": \"^4.4.5\",\n     \"dotenv\": \"^16.3.1\",\n     \"@iconify/utils\": \"^2.1.11\",\n-    \n     \"rollup-plugin-visualizer\": \"^5.9.2\"\n   }\n }\n"
+                }
+            ],
+            "date": 1697722730662,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"fastapi_vue_vite\",\n  \"private\": true,\n  \"version\": \"0.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"preview\": \"vite preview\"\n  },\n  \"dependencies\": {\n    \"vue\": \"^3.3.4\"\n  },\n  \"devDependencies\": {\n    \"@vitejs/plugin-vue\": \"^4.2.3\",\n    \"vite\": \"^4.4.5\",\n    \"dotenv\": \"^16.3.1\",\n  }\n}\n"
+        }
+    ]
+}

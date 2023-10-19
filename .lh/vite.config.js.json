@@ -1,0 +1,86 @@
+{
+    "sourceFile": "vite.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1697695343238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697695355990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { defineConfig } from 'vite'\n import vue from '@vitejs/plugin-vue'\n-import { wrapperEnv } from './build/utils'\n+import { wrapperEnv } from './build/utils'  //环境变了\n \n-\n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [vue()],\n })\n"
+                },
+                {
+                    "date": 1697695374119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,27 @@\n import { defineConfig } from 'vite'\n import vue from '@vitejs/plugin-vue'\n-import { wrapperEnv } from './build/utils'  //环境变了\n+import { wrapperEnv } from './build/utils'  //环境变量\n \n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [vue()],\n })\n+\n+\n+export default defineConfig(({ command, mode }) => {\n+  const env = loadEnv(mode, process.cwd())\n+  const viteEnv = wrapperEnv(env)\n+  \n+  // 这样就可以拿到定义好的环境变量了，也可以使用process.env.xxx这种方式进行访问\n+  const { VITE_PORT, VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv\n+  \n+  return {\n+    plugins: [vue()],\n+    base: VITE_PUBLIC_PATH || '/',\n+  }\n+})\n+\n+作者：大脸怪\n+链接：https://juejin.cn/post/7094079898641416222\n+来源：稀土掘金\n+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697695382277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n import vue from '@vitejs/plugin-vue'\n import { wrapperEnv } from './build/utils'  //环境变量\n \n // https://vitejs.dev/config/\n-export default defineConfig({\n-  plugins: [vue()],\n-})\n+// export default defineConfig({\n+//   plugins: [vue()],\n+// })\n \n \n export default defineConfig(({ command, mode }) => {\n   const env = loadEnv(mode, process.cwd())\n@@ -19,9 +19,4 @@\n     plugins: [vue()],\n     base: VITE_PUBLIC_PATH || '/',\n   }\n })\n-\n-作者：大脸怪\n-链接：https://juejin.cn/post/7094079898641416222\n-来源：稀土掘金\n-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697695388735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,13 @@\n import { defineConfig } from 'vite'\n import vue from '@vitejs/plugin-vue'\n import { wrapperEnv } from './build/utils'  //环境变量\n \n-// https://vitejs.dev/config/\n+// https://vitejs.dev/config/ 默认配置\n // export default defineConfig({\n //   plugins: [vue()],\n // })\n \n-\n export default defineConfig(({ command, mode }) => {\n   const env = loadEnv(mode, process.cwd())\n   const viteEnv = wrapperEnv(env)\n   \n"
+                },
+                {
+                    "date": 1697695448327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { defineConfig，loadEnv } from \"vite\";\n+import vue from \"@vitejs/plugin-vue\";\n+import { wrapperEnv } from \"./build/utils\"; //环境变量\n+\n+// https://vitejs.dev/config/ 默认配置\n+// export default defineConfig({\n+//   plugins: [vue()],\n+// })\n+\n+export default defineConfig(({ command, mode }) => {\n+  const env = loadEnv(mode, process.cwd());\n+  const viteEnv = wrapperEnv(env);\n+\n+  // 这样就可以拿到定义好的环境变量了，也可以使用process.env.xxx这种方式进行访问\n+  const { VITE_PORT, VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv;\n+\n+  return {\n+    plugins: [vue()],\n+    base: VITE_PUBLIC_PATH || \"/\",\n+  };\n+});\n"
+                },
+                {
+                    "date": 1697721414883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,42 +1,8 @@\n-import { defineConfig，loadEnv } from \"vite\";\n+import { defineConfig,loadEnv } from \"vite\";\n import vue from \"@vitejs/plugin-vue\";\n import { wrapperEnv } from \"./build/utils\"; //环境变量\n \n // https://vitejs.dev/config/ 默认配置\n // export default defineConfig({\n //   plugins: [vue()],\n // })\n-\n-export default defineConfig(({ command, mode }) => {\n-  const env = loadEnv(mode, process.cwd());\n-  const viteEnv = wrapperEnv(env);\n-\n-  // 这样就可以拿到定义好的环境变量了，也可以使用process.env.xxx这种方式进行访问\n-  const { VITE_PORT, VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv;\n-\n-  return {\n-    plugins: [vue()],\n-    base: VITE_PUBLIC_PATH || \"/\",\n-  };\n-});\n-import { defineConfig } from 'vite'\n-import vue from '@vitejs/plugin-vue'\n-import { wrapperEnv } from './build/utils'  //环境变量\n-\n-// https://vitejs.dev/config/ 默认配置\n-// export default defineConfig({\n-//   plugins: [vue()],\n-// })\n-\n-export default defineConfig(({ command, mode }) => {\n-  const env = loadEnv(mode, process.cwd())\n-  const viteEnv = wrapperEnv(env)\n-  \n-  // 这样就可以拿到定义好的环境变量了，也可以使用process.env.xxx这种方式进行访问\n-  const { VITE_PORT, VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv\n-  \n-  return {\n-    plugins: [vue()],\n-    base: VITE_PUBLIC_PATH || '/',\n-  }\n-})\n"
+                },
+                {
+                    "date": 1697721419945,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-import { defineConfig,loadEnv } from \"vite\";\n+import { defineConfig } from \"vite\";\n import vue from \"@vitejs/plugin-vue\";\n import { wrapperEnv } from \"./build/utils\"; //环境变量\n \n-// https://vitejs.dev/config/ 默认配置\n-// export default defineConfig({\n-//   plugins: [vue()],\n-// })\n+https://vitejs.dev/config/ 默认配置\n+export default defineConfig({\n+  plugins: [vue()],\n+})\n"
+                },
+                {
+                    "date": 1697721432423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-import { defineConfig } from \"vite\";\n+import { defineConfig,loadEnv } from \"vite\";\n import vue from \"@vitejs/plugin-vue\";\n import { wrapperEnv } from \"./build/utils\"; //环境变量\n \n-https://vitejs.dev/config/ 默认配置\n+// https://vitejs.dev/config/ 默认配置\n export default defineConfig({\n   plugins: [vue()],\n })\n"
+                },
+                {
+                    "date": 1697721438792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n-import { defineConfig,loadEnv } from \"vite\";\n+import { defineConfig } from \"vite\";\n import vue from \"@vitejs/plugin-vue\";\n-import { wrapperEnv } from \"./build/utils\"; //环境变量\n \n // https://vitejs.dev/config/ 默认配置\n export default defineConfig({\n   plugins: [vue()],\n"
+                },
+                {
+                    "date": 1697721469544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,21 @@\n-import { defineConfig } from \"vite\";\n+import { defineConfig,loadEnv } from \"vite\";\n import vue from \"@vitejs/plugin-vue\";\n+import { wrapperEnv } from \"./build/utils\"; //环境变量\n \n // https://vitejs.dev/config/ 默认配置\n-export default defineConfig({\n-  plugins: [vue()],\n-})\n+// export default defineConfig({\n+//   plugins: [vue()],\n+// })\n+\n+export default defineConfig(({ command, mode }) => {\n+  const env = loadEnv(mode, process.cwd());\n+  const viteEnv = wrapperEnv(env);\n+\n+  // 这样就可以拿到定义好的环境变量了，也可以使用process.env.xxx这种方式进行访问\n+  const { VITE_PORT, VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv;\n+\n+  return {\n+    plugins: [vue()],\n+    base: VITE_PUBLIC_PATH || \"/\",\n+  };\n+});\n"
+                },
+                {
+                    "date": 1697721479314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,10 @@\n-import { defineConfig,loadEnv } from \"vite\";\n-import vue from \"@vitejs/plugin-vue\";\n-import { wrapperEnv } from \"./build/utils\"; //环境变量\n+import { defineConfig } from 'vite'\n+import vue from '@vitejs/plugin-vue'\n+import { wrapperEnv } from './build/utils'  //环境变量\n \n-// https://vitejs.dev/config/ 默认配置\n-// export default defineConfig({\n-//   plugins: [vue()],\n-// })\n+// https://vitejs.dev/config/\n+export default defineConfig({\n+  plugins: [vue()],\n+})\n \n-export default defineConfig(({ command, mode }) => {\n-  const env = loadEnv(mode, process.cwd());\n-  const viteEnv = wrapperEnv(env);\n \n-  // 这样就可以拿到定义好的环境变量了，也可以使用process.env.xxx这种方式进行访问\n-  const { VITE_PORT, VITE_PUBLIC_PATH, VITE_PROXY } = viteEnv;\n-\n-  return {\n-    plugins: [vue()],\n-    base: VITE_PUBLIC_PATH || \"/\",\n-  };\n-});\n"
+                },
+                {
+                    "date": 1697721485271,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,8 @@\n \n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [vue()],\n+  \n })\n \n \n"
+                },
+                {
+                    "date": 1697721504048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,14 @@\n \n // https://vitejs.dev/config/\n export default defineConfig({\n   plugins: [vue()],\n+  server: {\n+    port: parseInt(import.meta.env.VITE_APP_PORT, 10) || 3000 // 默认为 3000，如果环境变量未设置\n+  },\n+  define: {\n+    APP_TITLE: JSON.stringify(import.meta.env.VITE_APP_TITLE || 'My Vite App') // 使用环境变量或默认标题\n+  }\n   \n })\n \n \n"
+                },
+                {
+                    "date": 1697721510014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,7 @@\n   },\n   define: {\n     APP_TITLE: JSON.stringify(import.meta.env.VITE_APP_TITLE || 'My Vite App') // 使用环境变量或默认标题\n   }\n-  \n })\n \n \n"
+                },
+                {
+                    "date": 1697721571696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,6 @@\n   }\n })\n \n \n+\n+\n"
+                },
+                {
+                    "date": 1697721576901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,20 +2,12 @@\n import vue from '@vitejs/plugin-vue'\n import { wrapperEnv } from './build/utils'  //环境变量\n \n // https://vitejs.dev/config/\n+\n export default defineConfig({\n   plugins: [vue()],\n   server: {\n-    port: parseInt(import.meta.env.VITE_APP_PORT, 10) || 3000 // 默认为 3000，如果环境变量未设置\n-  },\n-  define: {\n-    APP_TITLE: JSON.stringify(import.meta.env.VITE_APP_TITLE || 'My Vite App') // 使用环境变量或默认标题\n-  }\n-})\n-export default defineConfig({\n-  plugins: [vue()],\n-  server: {\n     port: VITE_APP_PORT\n   },\n   define: {\n     APP_TITLE: JSON.stringify(VITE_APP_TITLE)\n"
+                },
+                {
+                    "date": 1697721582633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { defineConfig } from 'vite'\n+import vue from '@vitejs/plugin-vue'\n+import { wrapperEnv } from './build/utils'  //环境变量\n+\n+// https://vitejs.dev/config/\n+// 如果你在vite.config.js的外部引用环境变量，最好先检查它们是否存在\n+const VITE_APP_PORT = import.meta.env.VITE_APP_PORT ? parseInt(import.meta.env.VITE_APP_PORT, 10) : 3000;\n+const VITE_APP_TITLE = import.meta.env.VITE_APP_TITLE || 'My Vite App';\n+\n+export default defineConfig({\n+  plugins: [vue()],\n+  server: {\n+    port: VITE_APP_PORT\n+  },\n+  define: {\n+    APP_TITLE: JSON.stringify(VITE_APP_TITLE)\n+  }\n+});\n+\n+\n+\n"
+                }
+            ],
+            "date": 1697695343238,
+            "name": "Commit-0",
+            "content": "import { defineConfig } from 'vite'\nimport vue from '@vitejs/plugin-vue'\nimport { wrapperEnv } from './build/utils'\n\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n  plugins: [vue()],\n})\n"
+        }
+    ]
+}
