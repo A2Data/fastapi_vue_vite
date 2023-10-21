@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/styles/reset.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697849876942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697849876942,
+            "name": "Commit-0",
+            "content": "html {\n    box-sizing: border-box;\n  }\n  \n  *,\n  ::before,\n  ::after {\n    margin: 0;\n    padding: 0;\n    box-sizing: inherit;\n  }\n  \n  a {\n    text-decoration: none;\n    color: inherit;\n  }\n  \n  a:hover,\n  a:link,\n  a:visited,\n  a:active {\n    text-decoration: none;\n  }\n  \n  ol,\n  ul {\n    list-style: none;\n  }\n  \n  input,\n  textarea {\n    outline: none;\n    border: none;\n    resize: none;\n  }\n  "
+        }
+    ]
+}

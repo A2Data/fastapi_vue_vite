@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/App.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1697849797225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697849803549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+<template>\n+  <h1 class=\"text-red\">Vue Fast Admin</h1>\n+</template>\n"
+                },
+                {
+                    "date": 1697849985510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,3 @@\n <template>\n-  <h1 class=\"text-red\">Vue Fast Admin</h1>\n+  <h1 class=\"text-g\">Vue Fast Admin</h1>\n </template>\n-<template>\n-  <h1 class=\"text-red\">Vue Simple Admin</h1>\n-</template>\n"
+                },
+                {
+                    "date": 1697849993342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <template>\n-  <h1 class=\"text-g\">Vue Fast Admin</h1>\n+  <h1 class=\"text-blue\">Vue FastApi Admin</h1>\n </template>\n"
+                },
+                {
+                    "date": 1697850155333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,100 @@\n <template>\n   <h1 class=\"text-blue\">Vue FastApi Admin</h1>\n </template>\n+\n+<template>\n+  <div p-24 color-red bg-blue font-600 flexc>FastAPI</div>\n+\n+  <div p-24>\n+    <p>\n+      文档：<a hover-decoration-underline c-blue href=\"https://uno.antfu.me/\" target=\"_blank\">https://uno.antfu.me/</a>\n+    </p>\n+    <p>\n+      playground：\n+      <a c-blue hover-decoration-underline href=\"https://unocss.antfu.me/play/\" target=\"_blank\">\n+        https://unocss.antfu.me/play/\n+      </a>\n+    </p>\n+\n+    <div flex mt-20>\n+      <div flex p-20 rounded-5 bg-white>\n+        <div text-20 font-600>Flex布局</div>\n+        <div flex w-360 flex-wrap justify-around ml-15 p-10>\n+          <div w-50 h-50 b-1 rounded-5 flex justify-center items-center p-10 m-20>\n+            <span w-6 h-6 rounded-3 bg-black></span>\n+          </div>\n+          <div w-50 h-50 b-1 rounded-5 flex justify-between p-10 m-20>\n+            <span w-6 h-6 rounded-3 bg-black></span>\n+            <span w-6 h-6 rounded-3 bg-black self-end></span>\n+          </div>\n+          <div w-50 h-50 b-1 rounded-5 flex justify-between p-10 m-20>\n+            <span w-6 h-6 rounded-3 bg-black></span>\n+            <span w-6 h-6 rounded-3 bg-black self-center></span>\n+            <span w-6 h-6 rounded-3 bg-black self-end></span>\n+          </div>\n+          <div w-50 h-50 b-1 rounded-5 flex justify-between p-10 m-20>\n+            <div flex flex-col justify-between>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+            </div>\n+            <div flex flex-col justify-between>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+            </div>\n+          </div>\n+          <div w-50 h-50 b-1 rounded-5 flex flex-col justify-between items-center p-10 m-20>\n+            <div flex w-full justify-between>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+            </div>\n+            <span w-6 h-6 rounded-3 bg-black></span>\n+            <div flex w-full justify-between>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+            </div>\n+          </div>\n+          <div w-50 h-50 b-1 rounded-5 flex flex-col justify-between p-10 m-20>\n+            <div flex w-full justify-between>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+            </div>\n+            <div flex w-full justify-between>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+            </div>\n+            <div flex w-full justify-between>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+              <span w-6 h-6 rounded-3 bg-black></span>\n+            </div>\n+          </div>\n+        </div>\n+      </div>\n+\n+      <div flex ml-35 p-20 rounded-5 bg=\"#fff\">\n+        <div text-20 font-600>字体：</div>\n+        <div ml-15 p-10 pl-30 pr-30 rounded-5>\n+          <p text-12>font-size: 12px</p>\n+          <p text-16>font-size: 16px</p>\n+          <p text-20>font-size: 20px</p>\n+\n+          <p font-300 mt-10>font-weight: 300</p>\n+          <p font-600>font-weight: 600</p>\n+          <p font-bold>font-weight: bold</p>\n+        </div>\n+      </div>\n+\n+      <div flex p-20 ml-35 rounded-5 bg-white>\n+        <div text-20 font-600>颜色：</div>\n+        <div ml-15 p-10 pl-30 pr-30 rounded-5>\n+          <p color=\"#235ac0\">color: #235ac0</p>\n+          <p c-pink-500>color: #ec4899</p>\n+\n+          <p bg=\"pink\" mt-10>background: pink</p>\n+          <p bg=\"#2563eb\" mt-10>background: #2563eb</p>\n+        </div>\n+      </div>\n+    </div>\n+  </div>\n+</template>\n+\n+<script setup></script>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697850160517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <h1 class=\"text-blue\">Vue FastApi Admin</h1>\n+  \n </template>\n \n <template>\n   <div p-24 color-red bg-blue font-600 flexc>FastAPI</div>\n"
+                },
+                {
+                    "date": 1697850203063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,6 @@\n <template>\n-  \n-</template>\n-\n-<template>\n+  <h1 class=\"text-blue\"  >Vue FastApi Admin</h1>\n   <div p-24 color-red bg-blue font-600 flexc>FastAPI</div>\n \n   <div p-24>\n     <p>\n"
+                },
+                {
+                    "date": 1697850208671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <h1 class=\"text-blue\"  >Vue FastApi Admin</h1>\n+  <h1 class=\"text-blue\"  ma >Vue FastApi Admin</h1>\n   <div p-24 color-red bg-blue font-600 flexc>FastAPI</div>\n \n   <div p-24>\n     <p>\n"
+                },
+                {
+                    "date": 1697850219117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <h1 class=\"text-blue\"  ma >Vue FastApi Admin</h1>\n+  <h1 class=\"text-blue\"   >Vue FastApi Admin</h1>\n   <div p-24 color-red bg-blue font-600 flexc>FastAPI</div>\n \n   <div p-24>\n     <p>\n"
+                },
+                {
+                    "date": 1697850226915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <h1 class=\"text-blue\"   >Vue FastApi Admin</h1>\n+  <h1 class=\"text-blue\"  ml >Vue FastApi Admin</h1>\n   <div p-24 color-red bg-blue font-600 flexc>FastAPI</div>\n \n   <div p-24>\n     <p>\n"
+                }
+            ],
+            "date": 1697849797225,
+            "name": "Commit-0",
+            "content": "<template>\n  <h1 class=\"text-red\">Vue Simple Admin</h1>\n</template>\n"
+        }
+    ]
+}

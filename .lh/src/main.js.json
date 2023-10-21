@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1697726087085,
@@ -12,6 +12,10 @@
                 {
                     "date": 1697849046768,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import { createApp } from 'vue'\n import './style.css'\n import App from './App.vue'\n import 'uno.css'\n \n"
+                },
+                {
+                    "date": 1697849784114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n+import { createApp } from 'vue'\n import './style.css'\n import App from './App.vue'\n+import '@/styles/reset.css'\n import 'uno.css'\n+import '@/styles/global.scss'\n \n createApp(App).mount('#app')\n"
                 }
             ],
             "date": 1697726087085,

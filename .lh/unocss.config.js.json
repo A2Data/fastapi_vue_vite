@@ -1,0 +1,18 @@
+{
+    "sourceFile": "unocss.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697849750226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697849750226,
+            "name": "Commit-0",
+            "content": "import { defineConfig, presetAttributify, presetUno } from 'unocss'\nimport presetRemToPx from '@unocss/preset-rem-to-px'\n\nexport default defineConfig({\n  content: {\n    pipeline: {\n      include: [/\\.(vue|svelte|[jt]sx|mdx?|html)($|\\?)/],\n    },\n  },\n  presets: [presetUno(), presetAttributify(), presetRemToPx({ baseFontSize: 4 })],\n  shortcuts: [\n    ['wh-full', 'w-full h-full'],\n    ['f-c-c', 'flex justify-center items-center'],\n    ['flex-col', 'flex flex-col'],\n  ],\n  rules: [\n    [\n      'card-shadow',\n      { 'box-shadow': '0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017' },\n    ],\n  ],\n})\n"
+        }
+    ]
+}
