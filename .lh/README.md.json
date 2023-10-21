@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 18,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1697693407036,
@@ -80,6 +80,26 @@
                 {
                     "date": 1697694228317,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).\n \n \n-## 按照 Vite 官网初始化项目，并删除一些无关文件\n+## 按照 Vite 官网初始化项目\n \n ```bash\n # 使用 npm\n npm create vite@latest\n"
+                },
+                {
+                    "date": 1697848190855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,19 @@\n \n ![效果](https://cdn.jsdelivr.net/gh/itdocs-icu/img/img/20230918150553.png)\n \n \n-初始化项目完成。\n\\ No newline at end of file\n+初始化项目完成。\n+\n+\n+\n+2. 集成 eslint + prettier, 约束代码规范（重要）\n+\n+> 注意1：需安装 vscode 插件: eslint、prettier、EditorConfig for VS Code\n+> 注意2：eslint 配置对新手来说可能有点复杂，可以暂时先使用我封装好 npm 包，后面再慢慢学习它的详细配置\n+> 注意3：配置完可重启 vscode 然后执行 `npm run lint:fix` 可以一次性修复所有不符合约定规范的代码\n+\n+\n+3. 配置 vite.config.js 和 jsconfig.json（重要但非必须）\n+\n+  3.1 配置 `alias` 别名： `@/` 表示 src 路径  `~/` 表示跟路径\n+  3.2 配置 `jsconfig.json`，目的之一就是为了 `alias` 别名有提示\n"
+                },
+                {
+                    "date": 1697848204591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n yarn create vite\n # 使用 pnpm\n pnpm create vite\n \n-# 进入项目 安装依赖且运行项目\n+\n cd fastapi_vue_vite\n npm install # or pnpm install\n npm run dev # or pnpm run dev\n ```\n"
+                },
+                {
+                    "date": 1697848209694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,11 @@\n \n \n ## 按照 Vite 官网初始化项目\n \n+\n+\n+# 进入项目 安装依赖且运行项目\n ```bash\n # 使用 npm\n npm create vite@latest\n \n@@ -17,9 +20,8 @@\n yarn create vite\n # 使用 pnpm\n pnpm create vite\n \n-\n cd fastapi_vue_vite\n npm install # or pnpm install\n npm run dev # or pnpm run dev\n ```\n"
+                },
+                {
+                    "date": 1697848215902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n ## 按照 Vite 官网初始化项目\n \n \n \n-# 进入项目 安装依赖且运行项目\n+1. 进入项目 安装依赖且运行项目\n ```bash\n # 使用 npm\n npm create vite@latest\n \n"
+                },
+                {
+                    "date": 1697848838965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n ## 按照 Vite 官网初始化项目\n \n \n \n-1. 进入项目 安装依赖且运行项目\n+1.进入项目 安装依赖且运行项目\n ```bash\n # 使用 npm\n npm create vite@latest\n \n"
                 }
             ],
             "date": 1697693407036,

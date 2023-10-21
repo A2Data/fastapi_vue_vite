@@ -1,0 +1,22 @@
+{
+    "sourceFile": "prettier.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1697848752613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697848836043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +0,0 @@\n-module.exports = {\n-    endOfLine: 'lf',\n-    printWidth: 120,\n-    singleQuote: true,\n-    semi: false,\n-  }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1697848752613,
+            "name": "Commit-0",
+            "content": "module.exports = {\n    endOfLine: 'lf',\n    printWidth: 120,\n    singleQuote: true,\n    semi: false,\n  }"
+        }
+    ]
+}

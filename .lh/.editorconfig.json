@@ -1,0 +1,22 @@
+{
+    "sourceFile": ".editorconfig",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1697849227488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697849238069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,4 @@\n [*]\n charset = utf-8\n end_of_line = lf\n \n-{\n-  \"parserOptions\": {\n-    \"ecmaVersion\": 7,\n-    \"sourceType\": \"module\"\n-  }\n-}\n"
+                }
+            ],
+            "date": 1697849227488,
+            "name": "Commit-0",
+            "content": "root = true\n\n[*]\ncharset = utf-8\nend_of_line = lf\n\n{\n  \"parserOptions\": {\n    \"ecmaVersion\": 7,\n    \"sourceType\": \"module\"\n  }\n}\n"
+        }
+    ]
+}

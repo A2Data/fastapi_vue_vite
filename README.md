@@ -9,6 +9,9 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## 按照 Vite 官网初始化项目
 
+
+
+1.进入项目 安装依赖且运行项目
 ```bash
 # 使用 npm
 npm create vite@latest
@@ -18,7 +21,6 @@ yarn create vite
 # 使用 pnpm
 pnpm create vite
 
-# 进入项目 安装依赖且运行项目
 cd fastapi_vue_vite
 npm install # or pnpm install
 npm run dev # or pnpm run dev
@@ -33,3 +35,17 @@ http://localhost:5173/
 
 
 初始化项目完成。
+
+
+
+2. 集成 eslint + prettier, 约束代码规范（重要）
+
+> 注意1：需安装 vscode 插件: eslint、prettier、EditorConfig for VS Code
+> 注意2：eslint 配置对新手来说可能有点复杂，可以暂时先使用我封装好 npm 包，后面再慢慢学习它的详细配置
+> 注意3：配置完可重启 vscode 然后执行 `npm run lint:fix` 可以一次性修复所有不符合约定规范的代码
+
+
+3. 配置 vite.config.js 和 jsconfig.json（重要但非必须）
+
+  3.1 配置 `alias` 别名： `@/` 表示 src 路径  `~/` 表示跟路径
+  3.2 配置 `jsconfig.json`，目的之一就是为了 `alias` 别名有提示
