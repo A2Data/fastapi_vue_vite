@@ -63,3 +63,14 @@ http://localhost:5173/
 
 > 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积
 >
+8. 配置 Naive UI的主题和全局api，让其用起来更得心应手（重要）
+
+> 此点非必要，但可能会影响后续的步骤
+
+
+9. 集成 `iconfy` 图标方案（建议非必要）
+
+> 使用方式， 如 <i i-vscode-icons:file-type-light-pnpm />
+> 建议安装vscode插件: Iconify IntelliSense
+
+

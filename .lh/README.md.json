@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 28,
+            "activePatchIndex": 31,
             "patches": [
                 {
                     "date": 1697693407036,
@@ -120,6 +120,18 @@
                 {
                     "date": 1697855638005,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,7 +58,8 @@\n \n 5. 集成 vue-router，添加初始页面：首页和登录页（重要）\n \n 6. 集成 pinia 状态管理，并支持持久化（重要）\n-7. . 集成 Naive UI，配置 unplugin（重要）\n+7. 集成 Naive UI，配置 unplugin（重要）\n \n\\ No newline at end of file\n-> 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积\n+> 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积\n+>\n"
+                },
+                {
+                    "date": 1697856041112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,5 +61,6 @@\n 6. 集成 pinia 状态管理，并支持持久化（重要）\n 7. 集成 Naive UI，配置 unplugin（重要）\n \n > 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积\n->\n\\ No newline at end of file\n+>\n+\n"
+                },
+                {
+                    "date": 1697856051792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,5 +62,9 @@\n 7. 集成 Naive UI，配置 unplugin（重要）\n \n > 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积\n >\n+8. 配置 Naive UI的主题和全局api，让其用起来更得心应手（重要）\n \n+> 此点非必要，但可能会影响后续的步骤\n+\n+\n"
+                },
+                {
+                    "date": 1697856067660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,4 +67,9 @@\n \n > 此点非必要，但可能会影响后续的步骤\n \n \n+9. 集成 `iconfy` 图标方案（建议非必要）\n+\n+> 使用方式， 如 <i i-vscode-icons:file-type-light-pnpm />\n+> 建议安装vscode插件: Iconify IntelliSense\n+\n"
                 }
             ],
             "date": 1697693407036,

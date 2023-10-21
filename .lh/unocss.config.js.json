@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1697849750226,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697856139946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,26 @@\n-import { defineConfig, presetAttributify, presetUno } from 'unocss'\n+import { defineConfig, presetAttributify, presetUno, presetIcons } from 'unocss'\n import presetRemToPx from '@unocss/preset-rem-to-px'\n \n export default defineConfig({\n   content: {\n     pipeline: {\n       include: [/\\.(vue|svelte|[jt]sx|mdx?|html)($|\\?)/],\n     },\n   },\n-  presets: [presetUno(), presetAttributify(), presetRemToPx({ baseFontSize: 4 })],\n+  presets: [\n+    presetUno(),\n+    presetAttributify(),\n+    presetIcons({\n+      scale: 1.2,\n+      warn: true,\n+      extraProperties: {\n+        display: 'inline-block',\n+        'vertical-align': 'middle',\n+      },\n+    }),\n+    presetRemToPx({ baseFontSize: 4 }),\n+  ],\n   shortcuts: [\n     ['wh-full', 'w-full h-full'],\n     ['f-c-c', 'flex justify-center items-center'],\n     ['flex-col', 'flex flex-col'],\n@@ -18,5 +30,29 @@\n       'card-shadow',\n       { 'box-shadow': '0 1px 2px -2px #00000029, 0 3px 6px #0000001f, 0 5px 12px 4px #00000017' },\n     ],\n   ],\n+  theme: {\n+    colors: {\n+      primary: 'var(--primary-color)',\n+      primary_hover: 'var(--primary-color-hover)',\n+      primary_pressed: 'var(--primary-color-pressed)',\n+      primary_active: 'var(--primary-color-active)',\n+      info: 'var(--info-color)',\n+      info_hover: 'var(--info-color-hover)',\n+      info_pressed: 'var(--info-color-pressed)',\n+      info_active: 'var(--info-color-active)',\n+      success: 'var(--success-color)',\n+      success_hover: 'var(--success-color-hover)',\n+      success_pressed: 'var(--success-color-pressed)',\n+      success_active: 'var(--success-color-active)',\n+      warning: 'var(--warning-color)',\n+      warning_hover: 'var(--warning-color-hover)',\n+      warning_pressed: 'var(--warning-color-pressed)',\n+      warning_active: 'var(--warning-color-active)',\n+      error: 'var(--error-color)',\n+      error_hover: 'var(--error-color-hover)',\n+      error_pressed: 'var(--error-color-pressed)',\n+      error_active: 'var(--error-color-active)',\n+    },\n+  },\n })\n"
                 }
             ],
             "date": 1697849750226,
