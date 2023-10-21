@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 25,
+            "activePatchIndex": 28,
             "patches": [
                 {
                     "date": 1697693407036,
@@ -108,6 +108,18 @@
                 {
                     "date": 1697855260475,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,12 +50,12 @@\n   3.1 配置 `alias` 别名： `@/` 表示 src 路径  `~/` 表示跟路径\n   3.2 配置 `jsconfig.json`，目的之一就是为了 `alias` 别名有提示\n \n \n-\n-\n 4. 配置样式相关的: 重置样式、全局样式、 sass、unocss\n \n > 推荐安装 vscode 插件： `UnoCss`\n \n \n 5. 集成 vue-router，添加初始页面：首页和登录页（重要）\n+\n+6. 集成 pinia 状态管理，并支持持久化（重要）\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697855626468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,5 +57,8 @@\n \n \n 5. 集成 vue-router，添加初始页面：首页和登录页（重要）\n \n-6. 集成 pinia 状态管理，并支持持久化（重要）\n\\ No newline at end of file\n+6. 集成 pinia 状态管理，并支持持久化（重要）\n+7. 7. 集成 Naive UI，配置 unplugin（重要）\n+\n+> 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697855632551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,7 +58,7 @@\n \n 5. 集成 vue-router，添加初始页面：首页和登录页（重要）\n \n 6. 集成 pinia 状态管理，并支持持久化（重要）\n-7. 7. 集成 Naive UI，配置 unplugin（重要）\n+7. . 集成 Naive UI，配置 unplugin（重要）\n \n > 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697855638005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,7 +58,8 @@\n \n 5. 集成 vue-router，添加初始页面：首页和登录页（重要）\n \n 6. 集成 pinia 状态管理，并支持持久化（重要）\n-7. . 集成 Naive UI，配置 unplugin（重要）\n+7. 集成 Naive UI，配置 unplugin（重要）\n \n\\ No newline at end of file\n-> 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积\n+> 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积\n+>\n"
                 }
             ],
             "date": 1697693407036,

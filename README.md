@@ -59,3 +59,7 @@ http://localhost:5173/
 5. 集成 vue-router，添加初始页面：首页和登录页（重要）
 
 6. 集成 pinia 状态管理，并支持持久化（重要）
+7. 集成 Naive UI，配置 unplugin（重要）
+
+> 配置 unplugin 不是必须的，但它可以为开发提供极大的便利，使用 Naive UI 组件、Vue 和 Vue-Router 的api 时无需导入，并且是按需的，不会加大打包的体积
+>
