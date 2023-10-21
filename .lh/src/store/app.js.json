@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/store/app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1697855051019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697855056168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n // 导入状态管理库的 defineStore 函数\n-\n import { defineStore } from 'pinia'\n \n+\n export const useAppStore = defineStore('app', {\n   state: () => ({\n     collapsed: false,\n   }),\n"
+                },
+                {
+                    "date": 1697855066085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n // 导入状态管理库的 defineStore 函数\n import { defineStore } from 'pinia'\n \n+// 定义名为 'app' 的状态管理模块\n \n export const useAppStore = defineStore('app', {\n+    // 初始状态\n+\n   state: () => ({\n     collapsed: false,\n   }),\n   actions: {\n"
+                },
+                {
+                    "date": 1697855079309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n export const useAppStore = defineStore('app', {\n     // 初始状态\n \n   state: () => ({\n-    collapsed: false,\n+    collapsed: false, // 直接定义初始值\n   }),\n   actions: {\n     switchCollapsed() {\n       this.collapsed = !this.collapsed\n"
+                },
+                {
+                    "date": 1697855089509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,11 @@\n // 定义名为 'app' 的状态管理模块\n \n export const useAppStore = defineStore('app', {\n     // 初始状态\n-\n-  state: () => ({\n-    collapsed: false, // 直接定义初始值\n-  }),\n+    state: {\n+      collapsed: false, // 直接定义初始值\n+    },\n   actions: {\n     switchCollapsed() {\n       this.collapsed = !this.collapsed\n     },\n"
+                },
+                {
+                    "date": 1697855103786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n     // 初始状态\n     state: {\n       collapsed: false, // 直接定义初始值\n     },\n+      // 定义操作\n+\n   actions: {\n     switchCollapsed() {\n       this.collapsed = !this.collapsed\n     },\n"
+                },
+                {
+                    "date": 1697855112655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n \n     switchCollapsed() {\n       this.collapsed = !this.collapsed\n     },\n+        // 设置 'collapsed' 状态\n+\n     setCollapsed(b) {\n       this.collapsed = b\n     },\n   },\n"
+                }
+            ],
+            "date": 1697855051019,
+            "name": "Commit-0",
+            "content": "// 导入状态管理库的 defineStore 函数\n\nimport { defineStore } from 'pinia'\n\nexport const useAppStore = defineStore('app', {\n  state: () => ({\n    collapsed: false,\n  }),\n  actions: {\n    switchCollapsed() {\n      this.collapsed = !this.collapsed\n    },\n    setCollapsed(b) {\n      this.collapsed = b\n    },\n  },\n  // 持久化\n  persist: true,\n})\n"
+        }
+    ]
+}

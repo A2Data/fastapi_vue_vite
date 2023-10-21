@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/store/user.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697855348726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697855348726,
+            "name": "Commit-0",
+            "content": "// 导入状态管理库的 defineStore 函数\nimport { defineStore } from 'pinia'\n\n// 定义名为 'user' 的用户状态管理模块\nexport const useUserStore = defineStore('user', {\n  // 初始状态\n  state: () => ({\n    userInfo: {},\n  }),\n\n  // 定义 getter 来获取用户名\n  getters: {\n    username() {\n      return this.userInfo?.username\n    },\n  },\n\n  // 定义操作来设置和重置用户信息\n  actions: {\n    // 设置用户信息\n    setUserInfo(userInfo) {\n      this.userInfo = userInfo\n    },\n    // 重置用户信息\n    resetUserInfo() {\n      // 使用内置的 $reset 方法来重置模块的状态\n      this.$reset()\n    },\n  },\n\n  // 启用持久化\n  persist: true,\n})\n"
+        }
+    ]
+}
