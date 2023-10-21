@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/utils/http.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697857564868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697857564868,
+            "name": "Commit-0",
+            "content": "import axios from 'axios'\n\n// 创建 Axios 实例\nconst request = axios.create({\n  baseURL: '/api', // 设置基本URL\n  timeout: 30000, // 设置请求超时时间\n})\n\n// 请求拦截器\nrequest.interceptors.request.use(\n  (config) => {\n    // TODO: 可以在请求前执行一些操作，如添加请求头、处理请求参数等\n    return config\n  },\n  (error) => {\n    // 请求错误时的处理逻辑\n    return Promise.reject(error)\n  }\n)\n\n// 响应拦截器\nrequest.interceptors.response.use(\n  (response) => {\n    // TODO: 处理响应正常的结果（例如处理成功的状态码）\n    return Promise.resolve(response?.data)\n  },\n  (error) => {\n    // 响应错误时的处理逻辑\n    return Promise.reject(error)\n  }\n)\n\nexport default request\n"
+        }
+    ]
+}

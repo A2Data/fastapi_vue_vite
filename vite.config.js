@@ -26,4 +26,18 @@ export default defineConfig({
       '@': path.resolve(process.cwd(), 'src'),
     },
   },
+  server: {
+    proxy: {
+      /**
+       * @desc    替换匹配值
+       * @请求路径  http://localhost:5173/api/user
+       * @转发路径  http://localhost:8080/user
+       */
+      '/api': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(new RegExp('^/api'), ''),
+      },
+    },
+  },
 })

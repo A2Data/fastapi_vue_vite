@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 31,
+            "activePatchIndex": 32,
             "patches": [
                 {
                     "date": 1697693407036,
@@ -132,6 +132,10 @@
                 {
                     "date": 1697856067660,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,4 +67,9 @@\n \n > 此点非必要，但可能会影响后续的步骤\n \n \n+9. 集成 `iconfy` 图标方案（建议非必要）\n+\n+> 使用方式， 如 <i i-vscode-icons:file-type-light-pnpm />\n+> 建议安装vscode插件: Iconify IntelliSense\n+\n"
+                },
+                {
+                    "date": 1697857666165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -72,4 +72,6 @@\n \n > 使用方式， 如 <i i-vscode-icons:file-type-light-pnpm />\n > 建议安装vscode插件: Iconify IntelliSense\n \n+10. 简单封装网络请求-axios，配置本地服务接口请求代理（重要）\n+\n"
                 }
             ],
             "date": 1697693407036,

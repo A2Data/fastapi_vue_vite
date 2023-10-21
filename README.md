@@ -73,4 +73,5 @@ http://localhost:5173/
 > 使用方式， 如 <i i-vscode-icons:file-type-light-pnpm />
 > 建议安装vscode插件: Iconify IntelliSense
 
+10. 简单封装网络请求-axios，配置本地服务接口请求代理（重要）
 
