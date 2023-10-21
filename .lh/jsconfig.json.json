@@ -1,0 +1,18 @@
+{
+    "sourceFile": "jsconfig.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697851952700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697851952700,
+            "name": "Commit-0",
+            "content": "{\n  \"compilerOptions\": {\n    \"target\": \"ESNext\",\n    \"baseUrl\": \"./\",\n    \"moduleResolution\": \"node\",\n    \"paths\": {\n      \"~/*\": [\"./*\"],\n      \"@/*\": [\"src/*\"]\n    },\n    \"jsx\": \"preserve\",\n    \"allowJs\": true\n  },\n  \"exclude\": [\"node_modules\", \"dist\"]\n}\n"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1697722730662,
@@ -28,6 +28,18 @@
                 {
                     "date": 1697726028911,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,15 +22,14 @@\n     \"unocss\": \"^0.56.0\",\n     \"unplugin-auto-import\": \"^0.16.6\",\n     \"unplugin-vue-components\": \"^0.25.2\",\n     \"vue-echarts\": \"^6.6.1\",\n-    \"vue-router\": \"^4.2.4\",\n+    \"vue-router\": \"^4.2.4\"\n   },\n   \"devDependencies\": {\n     \"@vitejs/plugin-vue\": \"^4.2.3\",\n     \"vite\": \"^4.4.5\",\n     \"dotenv\": \"^16.3.1\",\n     \"@iconify/utils\": \"^2.1.11\",\n-    \n     \"rollup-plugin-visualizer\": \"^5.9.2\"\n   }\n }\n"
+                },
+                {
+                    "date": 1697852893733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n     \"build\": \"vite build\",\n     \"preview\": \"vite preview\"\n   },\n   \"dependencies\": {\n-    \"vue\": \"^3.3.4\",\n     \"@unocss/preset-rem-to-px\": \"^0.56.0\",\n     \"@vueuse/core\": \"^10.4.1\",\n     \"axios\": \"^1.5.0\",\n     \"echarts\": \"^5.4.3\",\n@@ -21,15 +20,27 @@\n     \"sass\": \"^1.67.0\",\n     \"unocss\": \"^0.56.0\",\n     \"unplugin-auto-import\": \"^0.16.6\",\n     \"unplugin-vue-components\": \"^0.25.2\",\n+    \"vue\": \"^3.3.4\",\n     \"vue-echarts\": \"^6.6.1\",\n     \"vue-router\": \"^4.2.4\"\n   },\n   \"devDependencies\": {\n+    \"@iconify/utils\": \"^2.1.11\",\n     \"@vitejs/plugin-vue\": \"^4.2.3\",\n-    \"vite\": \"^4.4.5\",\n     \"dotenv\": \"^16.3.1\",\n-    \"@iconify/utils\": \"^2.1.11\",\n-    \"rollup-plugin-visualizer\": \"^5.9.2\"\n+    \"eslint\": \"^8.52.0\",\n+    \"eslint-config-prettier\": \"^9.0.0\",\n+    \"eslint-plugin-prettier\": \"^5.0.1\",\n+    \"eslint-plugin-vue\": \"^9.17.0\",\n+    \"prettier\": \"^3.0.3\",\n+    \"rollup-plugin-visualizer\": \"^5.9.2\",\n+    \"vite\": \"^4.4.5\"\n+  },\n+  \"eslintConfig\": {\n+    \"extends\": [\n+      \"@zclzone\",\n+      \".eslint-global-variables.json\"\n+    ]\n   }\n }\n"
+                },
+                {
+                    "date": 1697852940721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n   \"type\": \"module\",\n   \"scripts\": {\n     \"dev\": \"vite\",\n     \"build\": \"vite build\",\n-    \"preview\": \"vite preview\"\n+    \"preview\": \"vite preview\",\n+    \"lint:fix\": \"eslint --fix --ext .js,.vue .\"\n   },\n   \"dependencies\": {\n     \"@unocss/preset-rem-to-px\": \"^0.56.0\",\n     \"@vueuse/core\": \"^10.4.1\",\n@@ -38,9 +39,8 @@\n     \"vite\": \"^4.4.5\"\n   },\n   \"eslintConfig\": {\n     \"extends\": [\n-      \"@zclzone\",\n       \".eslint-global-variables.json\"\n     ]\n   }\n }\n"
+                },
+                {
+                    "date": 1697852953106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n     \"lint:fix\": \"eslint --fix --ext .js,.vue .\"\n   },\n   \"dependencies\": {\n     \"@unocss/preset-rem-to-px\": \"^0.56.0\",\n+    \"sass\": \"^1.67.0\",\n     \"@vueuse/core\": \"^10.4.1\",\n     \"axios\": \"^1.5.0\",\n     \"echarts\": \"^5.4.3\",\n     \"lodash-es\": \"^4.17.21\",\n"
                 }
             ],
             "date": 1697722730662,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 26,
             "patches": [
                 {
                     "date": 1697726087085,
@@ -16,6 +16,102 @@
                 {
                     "date": 1697849784114,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n+import { createApp } from 'vue'\n import './style.css'\n import App from './App.vue'\n+import '@/styles/reset.css'\n import 'uno.css'\n+import '@/styles/global.scss'\n \n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1697851673880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import '@/styles/reset.css'\n+import 'uno.css'\n+import '@/styles/global.scss'\n+import { router } from './router'\n+\n+\n+createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1697851695375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,7 @@\n import '@/styles/global.scss'\n import { router } from './router'\n \n \n-createApp(App).mount('#app')\n-import { createApp } from 'vue'\n-import './style.css'\n-import App from './App.vue'\n-import '@/styles/reset.css'\n-import 'uno.css'\n-import '@/styles/global.scss'\n-\n-createApp(App).mount('#app')\n+const app = createApp(App)\n+app.use(router)\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1697851843236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from './router'\n \n \n+\n const app = createApp(App)\n app.use(router)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697851849231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import '@/styles/reset.css'\n+import 'uno.css'\n+import '@/styles/global.scss'\n+import { router } from './router'\n+\n+\n+const app = createApp(App)\n+app.use(router)\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1697851858742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import '@/styles/reset.css'\n+import 'uno.css'\n+import '@/styles/global.scss'\n+import { router } from '@/router'\n+\n+\n+const app = createApp(App)\n+app.use(router)\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1697851864875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,32 +2,10 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from '@/router'\n+import { router } from '@router'\n \n \n const app = createApp(App)\n app.use(router)\n app.mount('#app')\n-import { createApp } from 'vue'\n-import App from './App.vue'\n-import '@/styles/reset.css'\n-import 'uno.css'\n-import '@/styles/global.scss'\n-import { router } from './router'\n-\n-\n-const app = createApp(App)\n-app.use(router)\n-app.mount('#app')\n-import { createApp } from 'vue'\n-import App from './App.vue'\n-import '@/styles/reset.css'\n-import 'uno.css'\n-import '@/styles/global.scss'\n-\n-\n-\n-const app = createApp(App)\n-app.use(router)\n-app.mount('#app')\n"
+                },
+                {
+                    "date": 1697851870109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from '@router'\n+import { router } from '.'\n \n \n const app = createApp(App)\n app.use(router)\n"
+                },
+                {
+                    "date": 1697851875867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import '@/styles/reset.css'\n+import 'uno.css'\n+import '@/styles/global.scss'\n+import { router } from '@'\n+\n+\n+const app = createApp(App)\n+app.use(router)\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1697851882346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,21 +2,10 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from '@'\n+import { router } from '@/router/.js'\n \n \n const app = createApp(App)\n app.use(router)\n app.mount('#app')\n-import { createApp } from 'vue'\n-import App from './App.vue'\n-import '@/styles/reset.css'\n-import 'uno.css'\n-import '@/styles/global.scss'\n-import { router } from '.'\n-\n-\n-const app = createApp(App)\n-app.use(router)\n-app.mount('#app')\n"
+                },
+                {
+                    "date": 1697851912193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from '@/router/.js'\n+import { router } from 'router'\n \n \n const app = createApp(App)\n app.use(router)\n"
+                },
+                {
+                    "date": 1697851918016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from 'router'\n+import { router } from './router'\n \n \n const app = createApp(App)\n app.use(router)\n"
+                },
+                {
+                    "date": 1697852695290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,7 @@\n import 'uno.css'\n import '@/styles/global.scss'\n import { router } from './router'\n \n-\n const app = createApp(App)\n app.use(router)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853233563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from './router'\n+import { router } from '.r'\n \n const app = createApp(App)\n app.use(router)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853239349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import '@/styles/reset.css'\n+import 'uno.css'\n+import '@/styles/global.scss'\n+import { router } from './route'\n+\n+const app = createApp(App)\n+app.use(router)\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853246534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,19 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from './route'\n+import { router } from './router'\n \n const app = createApp(App)\n app.use(router)\n app.mount('#app')\n-import { createApp } from 'vue'\n-import App from './App.vue'\n-import '@/styles/reset.css'\n-import 'uno.css'\n-import '@/styles/global.scss'\n-import { router } from '.r'\n-\n-const app = createApp(App)\n-app.use(router)\n-app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853257031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { router } from './router'\n+import { routers } from './router'\n \n const app = createApp(App)\n app.use(router)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853269741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n import { routers } from './router'\n+import {} from \n \n const app = createApp(App)\n-app.use(router)\n+app.use(routers)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853275492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import '@/styles/reset.css'\n+import 'uno.css'\n+import '@/styles/global.scss'\n+import { routers } from './router'\n+import {} from '.''\n+\n+const app = createApp(App)\n+app.use(routers)\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853281646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,9 @@\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n import { routers } from './router'\n-import {} from '.''\n+import {} from './src\n \n const app = createApp(App)\n app.use(routers)\n app.mount('#app')\n-import { createApp } from 'vue'\n-import App from './App.vue'\n-import '@/styles/reset.css'\n-import 'uno.css'\n-import '@/styles/global.scss'\n-import { routers } from './router'\n-import {} from \n-\n-const app = createApp(App)\n-app.use(routers)\n-app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853289674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n import { routers } from './router'\n-import {} from './src\n+import { routers } from './router'\n+import {} from './src/router'\n \n const app = createApp(App)\n app.use(routers)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853295534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import { routers } from './router'\n-import { routers } from './router'\n-import {} from './src/router'\n+import {routers} from './src/router'\n \n const app = createApp(App)\n app.use(routers)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853320220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import {routers} from './src/router'\n+import {routers} from './router'\n \n const app = createApp(App)\n app.use(routers)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853333928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import {routers} from './router'\n+import {router} from '@/router'\n \n const app = createApp(App)\n app.use(routers)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1697853339697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import '@/styles/reset.css'\n+import 'uno.css'\n+import '@/styles/global.scss'\n+import {router} from '/router'\n+\n+const app = createApp(App)\n+app.use(router)\n+app.mount('#app')\n"
                 }
             ],
             "date": 1697726087085,

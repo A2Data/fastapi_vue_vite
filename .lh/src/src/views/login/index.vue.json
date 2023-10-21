@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/src/views/login/index.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697851041879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697851041879,
+            "name": "Commit-0",
+            "content": "<template>\n    <h1>登录页</h1>\n    <RouterLink to=\"/\">go home</RouterLink>\n  </template>\n  "
+        }
+    ]
+}

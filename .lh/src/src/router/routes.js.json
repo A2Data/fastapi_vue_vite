@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/src/router/routes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1697851501821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697851547005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,16 @@\n+const Home = () => import('@/views/home/index.vue');\n+const Login = () => import('@/views/login/index.vue');\n+\n export const basicRoutes = [\n-    {\n-      name: 'Home',\n-      path: '/',\n-      component: () => import('@/views/home/index.vue'),\n-    },\n-    {\n-      name: 'Login',\n-      path: '/login',\n-      component: () => import('@/views/login/index.vue'),\n-    },\n-  ]\n+        {\n+            name: 'Home',\n+            path: '/',\n+            component: Home,\n+        },\n+        {\n+            name: 'Login',\n+            path: '/login',\n+            component: Login,\n+        },\n+    ]\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697851567246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,13 @@\n-const Home = () => import('@/views/home/index.vue');\n-const Login = () => import('@/views/login/index.vue');\n-\n export const basicRoutes = [\n-        {\n-            name: 'Home',\n-            path: '/',\n-            component: Home,\n-        },\n-        {\n-            name: 'Login',\n-            path: '/login',\n-            component: Login,\n-        },\n-    ]\n+    {\n+      name: 'Home',\n+      path: '/',\n+      component: () => import('@/views/home/index.vue'),\n+    },\n+    {\n+      name: 'Login',\n+      path: '/login',\n+      component: () => import('@/views/login/index.vue'),\n+    },\n+  ]\n   \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1697851501821,
+            "name": "Commit-0",
+            "content": "export const basicRoutes = [\n    {\n      name: 'Home',\n      path: '/',\n      component: () => import('@/views/home/index.vue'),\n    },\n    {\n      name: 'Login',\n      path: '/login',\n      component: () => import('@/views/login/index.vue'),\n    },\n  ]\n  "
+        }
+    ]
+}

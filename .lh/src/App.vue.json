@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1697849797225,
@@ -44,6 +44,10 @@
                 {
                     "date": 1697850226915,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <h1 class=\"text-blue\"   >Vue FastApi Admin</h1>\n+  <h1 class=\"text-blue\"  ml >Vue FastApi Admin</h1>\n   <div p-24 color-red bg-blue font-600 flexc>FastAPI</div>\n \n   <div p-24>\n     <p>\n"
+                },
+                {
+                    "date": 1697853706235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\n-  <h1 class=\"text-blue\"  ml >Vue FastApi Admin</h1>\n+  <h1 class=\"text-blue\"  ml-15 >Vue FastApi Admin</h1>\n   <div p-24 color-red bg-blue font-600 flexc>FastAPI</div>\n \n   <div p-24>\n     <p>\n"
                 }
             ],
             "date": 1697849797225,

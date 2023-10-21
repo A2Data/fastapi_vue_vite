@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1697693407036,
@@ -100,6 +100,10 @@
                 {
                     "date": 1697848838965,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n ## 按照 Vite 官网初始化项目\n \n \n \n-1. 进入项目 安装依赖且运行项目\n+1.进入项目 安装依赖且运行项目\n ```bash\n # 使用 npm\n npm create vite@latest\n \n"
+                },
+                {
+                    "date": 1697850898818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,4 +48,14 @@\n 3. 配置 vite.config.js 和 jsconfig.json（重要但非必须）\n \n   3.1 配置 `alias` 别名： `@/` 表示 src 路径  `~/` 表示跟路径\n   3.2 配置 `jsconfig.json`，目的之一就是为了 `alias` 别名有提示\n+\n+\n+\n+\n+4. 配置样式相关的: 重置样式、全局样式、 sass、unocss\n+\n+> 推荐安装 vscode 插件： `UnoCss`\n+\n+\n+5. 集成 vue-router，添加初始页面：首页和登录页（重要）\n"
                 }
             ],
             "date": 1697693407036,

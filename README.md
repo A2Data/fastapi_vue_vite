@@ -49,3 +49,11 @@ http://localhost:5173/
 
   3.1 配置 `alias` 别名： `@/` 表示 src 路径  `~/` 表示跟路径
   3.2 配置 `jsconfig.json`，目的之一就是为了 `alias` 别名有提示
+
+
+4. 配置样式相关的: 重置样式、全局样式、 sass、unocss
+
+> 推荐安装 vscode 插件： `UnoCss`
+
+
+5. 集成 vue-router，添加初始页面：首页和登录页（重要）

@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1697849281994,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697851609874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,7 @@\n     \"parserOptions\": {\n       \"ecmaVersion\": 7,\n       \"sourceType\": \"module\"\n     }\n+    \n   }\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1697851617712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,8 @@\n     \"parserOptions\": {\n       \"ecmaVersion\": 7,\n       \"sourceType\": \"module\"\n     },\n-    \"parser\": \"babel-eslint\", // 处理class类中eslint报错\n+    \"parser\": \"babel-eslint\" // 处理class类中eslint报错\n \n   }\n   \n\\ No newline at end of file\n"
                 }
             ],
             "date": 1697849281994,

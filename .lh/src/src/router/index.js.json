@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1697851078291,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697851458145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,4 +6,16 @@\n   history: createWebHashHistory('/'),\n   routes: basicRoutes,\n   scrollBehavior: () => ({ left: 0, top: 0 }),\n })\n+import { createWebHashHistory, createRouter } from 'vue-router'\n+import { basicRoutes } from './routes'\n+\n+// 创建路由器实例\n+export const router = createRouter({\n+  // 使用 hash 模式的路由历史\n+  history: createWebHashHistory('/'),\n+  // 路由配置，这里使用了从 './routes' 导入的基本路由配置\n+  routes: basicRoutes,\n+  // 滚动行为配置，每次导航到新路由时将滚动位置重置为左上角\n+  scrollBehavior: () => ({ left: 0, top: 0 }),\n+})\n"
+                },
+                {
+                    "date": 1697853192074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,6 @@\n-import { createWebHashHistory } from 'vue-router'\n-import { createRouter } from 'vue-router'\n-import { basicRoutes } from './routes'\n-\n-export const router = createRouter({\n-  history: createWebHashHistory('/'),\n-  routes: basicRoutes,\n-  scrollBehavior: () => ({ left: 0, top: 0 }),\n-})\n import { createWebHashHistory, createRouter } from 'vue-router'\n-import { basicRoutes } from './routes'\n+import { basicRoutes } from 'routes'\n \n // 创建路由器实例\n export const router = createRouter({\n   // 使用 hash 模式的路由历史\n"
+                },
+                {
+                    "date": 1697853197242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { createWebHashHistory, createRouter } from 'vue-router'\n+import { basicRoutes } from '.routes'\n+\n+// 创建路由器实例\n+export const router = createRouter({\n+  // 使用 hash 模式的路由历史\n+  history: createWebHashHistory('/'),\n+  // 路由配置，这里使用了从 './routes' 导入的基本路由配置\n+  routes: basicRoutes,\n+  // 滚动行为配置，每次导航到新路由时将滚动位置重置为左上角\n+  scrollBehavior: () => ({ left: 0, top: 0 }),\n+})\n"
+                },
+                {
+                    "date": 1697853205101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { createWebHashHistory, createRouter } from 'vue-router'\n+import { basicRoutes } from './routes'\n+\n+// 创建路由器实例\n+export const router = createRouter({\n+  // 使用 hash 模式的路由历史\n+  history: createWebHashHistory('/'),\n+  // 路由配置，这里使用了从 './routes' 导入的基本路由配置\n+  routes: basicRoutes,\n+  // 滚动行为配置，每次导航到新路由时将滚动位置重置为左上角\n+  scrollBehavior: () => ({ left: 0, top: 0 }),\n+})\n"
+                },
+                {
+                    "date": 1697853214895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createWebHashHistory, createRouter } from 'vue-router'\n-import { basicRoutes } from './routesroutes'\n+import { basicRoutes } from './routes'\n \n // 创建路由器实例\n export const router = createRouter({\n   // 使用 hash 模式的路由历史\n"
+                }
+            ],
+            "date": 1697851078291,
+            "name": "Commit-0",
+            "content": "import { createWebHashHistory } from 'vue-router'\nimport { createRouter } from 'vue-router'\nimport { basicRoutes } from './routes'\n\nexport const router = createRouter({\n  history: createWebHashHistory('/'),\n  routes: basicRoutes,\n  scrollBehavior: () => ({ left: 0, top: 0 }),\n})\n"
+        }
+    ]
+}

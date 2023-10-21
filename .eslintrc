@@ -2,6 +2,8 @@
     "parserOptions": {
       "ecmaVersion": 7,
       "sourceType": "module"
-    }
+    },
+    "parser": "babel-eslint" // 处理class类中eslint报错
+
   }
   
