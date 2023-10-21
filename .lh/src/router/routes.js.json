@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/router/routes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697858006442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697858006442,
+            "name": "Commit-0",
+            "content": "export const basicRoutes = [\n  {\n    name: 'Home',\n    path: '/',\n    component: () => import('@/views/home/index.vue'),\n  },\n  {\n    name: 'Login',\n    path: '/login',\n    component: () => import('@/views/login/index.vue'),\n    isHidden: true,\n  },\n  {\n    name: '404',\n    path: '/404',\n    component: () => import('@/views/error-page/404.vue'),\n    isHidden: true,\n  },\n]\n\nexport const asyncRoutes = []\n\nexport const NOT_FOUND_ROUTE = {\n  name: 'NotFound',\n  path: '/:pathMatch(.*)*',\n  redirect: '/404',\n}\n"
+        }
+    ]
+}

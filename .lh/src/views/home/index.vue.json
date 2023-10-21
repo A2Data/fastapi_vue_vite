@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/views/home/index.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1697858064727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1697858064727,
+            "name": "Commit-0",
+            "content": "<template>\n  <div v-if=\"userStore.userInfo?.id\">\n    <img :src=\"userStore.userInfo.avatar\" alt=\"avatar\" />\n    <p class=\"mt-12\">欢迎您， {{ userStore.username }}</p>\n  </div>\n\n  <RouterLink v-else to=\"/login\">to login</RouterLink>\n</template>\n\n<script setup>\nimport { useUserStore } from '@/store/user'\nconst userStore = useUserStore()\n</script>\n"
+        }
+    ]
+}

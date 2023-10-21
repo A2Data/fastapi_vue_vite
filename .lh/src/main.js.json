@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 27,
             "patches": [
                 {
                     "date": 1697726087085,
@@ -112,6 +112,10 @@
                 {
                     "date": 1697853339697,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,10 @@\n+import { createApp } from 'vue'\n+import App from './App.vue'\n+import '@/styles/reset.css'\n+import 'uno.css'\n+import '@/styles/global.scss'\n+import {router} from '/router'\n+\n+const app = createApp(App)\n+app.use(router)\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1697858110486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,19 +2,64 @@\n import App from './App.vue'\n import '@/styles/reset.css'\n import 'uno.css'\n import '@/styles/global.scss'\n-import {router} from '/router'\n+import { router } from './router'\n+import { createPinia } from 'pinia'\n+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'\n+import { useUserStore } from './store/user'\n+import { usePermissionStore } from './store/permission'\n+import { NOT_FOUND_ROUTE } from '@/router/routes'\n \n const app = createApp(App)\n app.use(router)\n+\n+const pinia = createPinia()\n+/**\n+ * 持久化\n+ * 文档: https://prazdevs.github.io/pinia-plugin-persistedstate/zh/guide/\n+ */\n+pinia.use(piniaPluginPersistedstate)\n+app.use(pinia)\n+\n app.mount('#app')\n-import { createApp } from 'vue'\n-import App from './App.vue'\n-import '@/styles/reset.css'\n-import 'uno.css'\n-import '@/styles/global.scss'\n-import {router} from '@/router'\n \n-const app = createApp(App)\n-app.use(routers)\n-app.mount('#app')\n+// 添加路由守卫\n+const WHITE_LIST = ['/login', '/404']\n+router.beforeEach(async (to) => {\n+  const userStore = useUserStore()\n+  const permissionStore = usePermissionStore()\n+  const token = userStore.token\n+\n+  /**\n+   * 没有token的情况\n+   * 如果是白名单则通过，否则跳转登录页\n+   */\n+  if (!token) {\n+    if (WHITE_LIST.includes(to.path)) return true\n+    return { path: 'login' }\n+  }\n+\n+  /**\n+   * 有token的情况\n+   * 判断有没有获取用户信息，有则通过，无则获取用户信息\n+   */\n+  if (!userStore.userInfo?.id) {\n+    // 获取用户信息\n+    await userStore.getUserInfo()\n+    // 创建权限路由列表\n+    const accessRoutes = permissionStore.generateRoutes(userStore.role)\n+    // 动态添加有权限的路由\n+    accessRoutes.forEach((route) => {\n+      !router.hasRoute(route.name) && router.addRoute(route)\n+    })\n+    // 将无法匹配的路由添加到路由列表的最后面\n+    router.addRoute(NOT_FOUND_ROUTE)\n+    // 添加完路由后重走路由守卫\n+    return { ...to, replace: true }\n+  }\n+\n+  // 已登录的状态下进入登录页时强制跳回到首页\n+  if (to.path === '/login') return { path: '/' }\n+\n+  return true\n+})\n"
                 }
             ],
             "date": 1697726087085,

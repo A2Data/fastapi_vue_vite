@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/views/login/index.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1697858072711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1697858077848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\n   <div class=\"wh-full flex\">\n     <div class=\"m-auto w-420 card-shadow px-32 py-40\">\n-      <h1 class=\"text-center\">Vue Simple Admin</h1>\n+      <h1 class=\"text-center\">Vue FastAPI Admin</h1>\n       <n-input\n         v-model:value=\"loginInfo.username\"\n         autofocus\n         class=\"mt-32 h-48 items-center pl-12 text-16\"\n"
+                }
+            ],
+            "date": 1697858072711,
+            "name": "Commit-0",
+            "content": "<template>\n  <div class=\"wh-full flex\">\n    <div class=\"m-auto w-420 card-shadow px-32 py-40\">\n      <h1 class=\"text-center\">Vue Simple Admin</h1>\n      <n-input\n        v-model:value=\"loginInfo.username\"\n        autofocus\n        class=\"mt-32 h-48 items-center pl-12 text-16\"\n        placeholder=\"admin\"\n        :maxlength=\"20\"\n      />\n\n      <n-input\n        v-model:value=\"loginInfo.password\"\n        class=\"mt-32 h-48 items-center pl-12 text-16\"\n        type=\"password\"\n        show-password-on=\"mousedown\"\n        placeholder=\"123456\"\n        :maxlength=\"20\"\n        @keypress.enter=\"handleLogin\"\n      />\n\n      <n-button\n        class=\"mt-32 h-48 w-full rounded-4 text-16\"\n        type=\"primary\"\n        :loading=\"loading\"\n        @click=\"handleLogin\"\n      >\n        登录\n      </n-button>\n    </div>\n  </div>\n</template>\n\n<script setup>\nimport { useUserStore } from '@/store/user'\nimport api from './api'\n\nconst router = useRouter()\nconst userStore = useUserStore()\nconst loginInfo = ref({})\nconst loading = ref(false)\n\nasync function handleLogin() {\n  if (!loginInfo.value.username) return $message.error('请输入用户名')\n  if (!loginInfo.value.password) return $message.error('请输入密码')\n\n  loading.value = true\n  const { token } = await api.login(loginInfo.value)\n  if (token) {\n    userStore.setToken(token)\n    router.push('/')\n  }\n  loading.value = false\n}\n</script>\n"
+        }
+    ]
+}
