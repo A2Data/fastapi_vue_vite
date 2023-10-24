@@ -3,10 +3,9 @@ import { asyncRoutes, basicRoutes } from '@/router/routes'
 
 function hasPermission(route, role) {
   const routeRole = route.meta?.role ? route.meta.role : []
-  if (!role.length || !routeRole.length) {
-    return true
-  }
-  return role.some((item) => routeRole.includes(item))
+  if (!role) return false
+  if (!routeRole.length) return true
+  return routeRole.includes(role)
 }
 
 function filterAsyncRoutes(routes = [], role) {
@@ -43,7 +42,7 @@ export const usePermissionStore = defineStore('permission', {
     },
   },
   actions: {
-    generateRoutes(role = []) {
+    generateRoutes(role) {
       const accessRoutes = filterAsyncRoutes(asyncRoutes, role)
       this.accessRoutes = accessRoutes
       return accessRoutes

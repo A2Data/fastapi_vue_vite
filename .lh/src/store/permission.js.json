@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1698111177056,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1698143547487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,11 @@\n import { asyncRoutes, basicRoutes } from '@/router/routes'\n \n function hasPermission(route, role) {\n   const routeRole = route.meta?.role ? route.meta.role : []\n-  if (!role.length || !routeRole.length) {\n-    return true\n-  }\n-  return role.some((item) => routeRole.includes(item))\n+  if (!role) return false\n+  if (!routeRole.length) return true\n+  return routeRole.includes(role)\n }\n \n function filterAsyncRoutes(routes = [], role) {\n   const res = []\n@@ -42,9 +41,9 @@\n       return this.routes.filter((route) => route.name && !route.isHidden)\n     },\n   },\n   actions: {\n-    generateRoutes(role = []) {\n+    generateRoutes(role) {\n       const accessRoutes = filterAsyncRoutes(asyncRoutes, role)\n       this.accessRoutes = accessRoutes\n       return accessRoutes\n     },\n"
                 }
             ],
             "date": 1698111177056,

@@ -58,7 +58,7 @@ export const asyncRoutes = [
     meta: {
       title: '测试菜单',
       icon: 'i-uil:pagelines',
-      role: ['admin'],
+      role: ['admin', 'test'],
     },
     children: [
       {
@@ -79,6 +79,16 @@ export const asyncRoutes = [
           title: '测试页2',
           icon: 'i-material-symbols:auto-awesome-outline-rounded',
           role: ['admin'],
+        },
+      },
+      {
+        name: 'Page3',
+        path: 'page3',
+        component: () => import('@/views/test-page/page3.vue'),
+        meta: {
+          title: '测试按钮权限',
+          icon: 'i-material-symbols:auto-awesome-outline-rounded',
+          role: ['admin', 'test'],
         },
       },
     ],

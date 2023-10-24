@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1697858006442,
@@ -28,6 +28,10 @@
                 {
                     "date": 1698111160501,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,41 @@\n+// @unocss-include （不能删，否则本文件下的所有图标无法动态渲染）\n+import Layout from '@/layout/index.vue'\n+\n+/**\n+ * 路由属性解释：\n+ *  name: 必须要有，否则不展示在菜单上\n+ *  isHidden: 可选，为true时不会展示在菜单上，但如果有权限的话还是会添加到路由表中\n+ *  title: 可选，展示在菜单的名称，如果没有则取name展示\n+ *  icon: 可选，菜单图标，以 i- 开头，图标库: https://icones.js.org/collection/all\n+ *  role: 可选，表示当前菜单可访问的角色列表，如果没有则默认不设权限控制\n+ *\n+ * 注: 只有 asyncRoutes 受权限控制，basicRoutes 默认所有角色都可访问\n+ */\n+\n export const basicRoutes = [\n   {\n-    name: 'Index',\n+    name: 'Workbench',\n     path: '/',\n-    component: () => import('@/layout/index.vue'),\n+    component: Layout,\n     redirect: '/home',\n+    meta: {\n+      title: '工作台',\n+      icon: 'i-mdi:home',\n+    },\n     children: [\n       {\n         name: 'Home',\n         path: 'home',\n         component: () => import('@/views/home/index.vue'),\n+        meta: {\n+          title: '首页',\n+          icon: 'i-mdi:home',\n+        },\n       },\n     ],\n   },\n+\n   {\n     name: 'Login',\n     path: '/login',\n     component: () => import('@/views/login/index.vue'),\n@@ -25,9 +48,43 @@\n     isHidden: true,\n   },\n ]\n \n-export const asyncRoutes = []\n+export const asyncRoutes = [\n+  {\n+    name: 'Test',\n+    path: '/test',\n+    component: Layout,\n+    redirect: '/test/page1',\n+    meta: {\n+      title: '测试菜单',\n+      icon: 'i-uil:pagelines',\n+      role: ['admin'],\n+    },\n+    children: [\n+      {\n+        name: 'Page1',\n+        path: 'page1',\n+        component: () => import('@/views/test-page/page1.vue'),\n+        meta: {\n+          title: '测试页1',\n+          icon: 'i-material-symbols:auto-awesome-outline-rounded',\n+          role: ['admin'],\n+        },\n+      },\n+      {\n+        name: 'Page2',\n+        path: 'page2',\n+        component: () => import('@/views/test-page/page2.vue'),\n+        meta: {\n+          title: '测试页2',\n+          icon: 'i-material-symbols:auto-awesome-outline-rounded',\n+          role: ['admin'],\n+        },\n+      },\n+    ],\n+  },\n+]\n \n export const NOT_FOUND_ROUTE = {\n   name: 'NotFound',\n   path: '/:pathMatch(.*)*',\n"
+                },
+                {
+                    "date": 1698143489392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,9 +57,9 @@\n     redirect: '/test/page1',\n     meta: {\n       title: '测试菜单',\n       icon: 'i-uil:pagelines',\n-      role: ['admin'],\n+      role: ['admin', 'test'],\n     },\n     children: [\n       {\n         name: 'Page1',\n@@ -80,8 +80,18 @@\n           icon: 'i-material-symbols:auto-awesome-outline-rounded',\n           role: ['admin'],\n         },\n       },\n+      {\n+        name: 'Page3',\n+        path: 'page3',\n+        component: () => import('@/views/test-page/page3.vue'),\n+        meta: {\n+          title: '测试按钮权限',\n+          icon: 'i-material-symbols:auto-awesome-outline-rounded',\n+          role: ['admin', 'test'],\n+        },\n+      },\n     ],\n   },\n ]\n \n"
                 }
             ],
             "date": 1697858006442,
