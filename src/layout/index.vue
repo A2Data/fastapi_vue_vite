@@ -35,6 +35,7 @@
             {{ item.meta.title }}
           </n-breadcrumb-item>
         </n-breadcrumb>
+
         <div class="ml-auto flex items-center">
           <n-dropdown :options="dropdownOptions" @select="handleDropSelect">
             <div class="flex items-center cursor-pointer">
@@ -46,6 +47,9 @@
           </n-dropdown>
         </div>
       </header>
+
+      <AppTab class="h-48 flex-shrink-0 flex items-center px-12" />
+
       <router-view v-slot="{ Component, route }">
         <transition :key="route.name" name="fade-slide" mode="out-in" appear>
           <main class="flex-1 h-full bg-#f5f6fb p-24 cus-scroll">
@@ -61,7 +65,7 @@
 import { useAppStore } from '@/store/app'
 import { useUserStore } from '@/store/user'
 import { usePermissionStore } from '@/store/permission'
-import { h } from 'vue'
+import AppTab from './components/tab/index.vue'
 
 const appStore = useAppStore()
 const userStore = useUserStore()

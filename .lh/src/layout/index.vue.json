@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1698110998372,
@@ -20,6 +20,10 @@
                 {
                     "date": 1698142887280,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,11 +45,15 @@\n             </div>\n           </n-dropdown>\n         </div>\n       </header>\n-      <main class=\"flex-1 h-full bg-#f5f6fb overscroll-auto p-24\">\n-        <RouterView />\n-      </main>\n+      <router-view v-slot=\"{ Component, route }\">\n+        <transition :key=\"route.name\" name=\"fade-slide\" mode=\"out-in\" appear>\n+          <main class=\"flex-1 h-full bg-#f5f6fb p-24 overflow-auto\">\n+            <component :is=\"Component\" :key=\"route.fullPath\" />\n+          </main>\n+        </transition>\n+      </router-view>\n     </article>\n   </div>\n </template>\n \n@@ -183,5 +187,5 @@\n       },\n     })\n   }\n }\n-</script>\n\\ No newline at end of file\n+</script>\n"
+                },
+                {
+                    "date": 1698144373549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,9 @@\n           >\n             {{ item.meta.title }}\n           </n-breadcrumb-item>\n         </n-breadcrumb>\n+\n         <div class=\"ml-auto flex items-center\">\n           <n-dropdown :options=\"dropdownOptions\" @select=\"handleDropSelect\">\n             <div class=\"flex items-center cursor-pointer\">\n               <img :src=\"userStore.userInfo.avatar\" class=\"h-36 w-36 rounded-full\" />\n@@ -45,11 +46,14 @@\n             </div>\n           </n-dropdown>\n         </div>\n       </header>\n+\n+      <AppTab class=\"h-48 flex-shrink-0 flex items-center px-12\" />\n+\n       <router-view v-slot=\"{ Component, route }\">\n         <transition :key=\"route.name\" name=\"fade-slide\" mode=\"out-in\" appear>\n-          <main class=\"flex-1 h-full bg-#f5f6fb p-24 overflow-auto\">\n+          <main class=\"flex-1 h-full bg-#f5f6fb p-24 cus-scroll\">\n             <component :is=\"Component\" :key=\"route.fullPath\" />\n           </main>\n         </transition>\n       </router-view>\n@@ -60,9 +64,9 @@\n <script setup>\n import { useAppStore } from '@/store/app'\n import { useUserStore } from '@/store/user'\n import { usePermissionStore } from '@/store/permission'\n-import { h } from 'vue'\n+import AppTab from './components/tab/index.vue'\n \n const appStore = useAppStore()\n const userStore = useUserStore()\n const permissionStore = usePermissionStore()\n"
                 }
             ],
             "date": 1698110998372,
