@@ -10,6 +10,7 @@ import { pmsBtn } from '@/directives'
 import { useUserStore } from './store/user'
 import { usePermissionStore } from './store/permission'
 import { NOT_FOUND_ROUTE } from '@/router/routes'
+import { setupNaiveDiscreteApi } from './utils/naiveTools'
 
 const app = createApp(App)
 app.use(router)
@@ -22,6 +23,7 @@ const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia)
 app.directive('pmsBtn', pmsBtn) // 注册按钮权限自定义指令
+setupNaiveDiscreteApi()
 
 app.mount('#app')
 
