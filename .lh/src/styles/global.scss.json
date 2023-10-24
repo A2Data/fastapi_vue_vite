@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1697849863560,
@@ -12,6 +12,10 @@
                 {
                     "date": 1698142934756,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,20 @@\n   width: 100%;\n   height: 100%;\n }\n \n+/* transition fade-slide */\n+.fade-slide-leave-active,\n+.fade-slide-enter-active {\n+  transition: all 0.3s;\n+}\n+\n+.fade-slide-enter-from {\n+  opacity: 0;\n+  transform: translateX(-30px);\n+}\n+\n+.fade-slide-leave-to {\n+  opacity: 0;\n+  transform: translateX(30px);\n+}\n+\n"
+                },
+                {
+                    "date": 1698143293299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,4 +25,43 @@\n   opacity: 0;\n   transform: translateX(30px);\n }\n \n+/* 自定义滚动条样式 */\n+.cus-scroll {\n+  overflow: auto;\n+  &::-webkit-scrollbar {\n+    width: 8px;\n+    height: 8px;\n+  }\n+}\n+.cus-scroll-x {\n+  overflow-x: auto;\n+  &::-webkit-scrollbar {\n+    width: 0;\n+    height: 8px;\n+  }\n+}\n+.cus-scroll-y {\n+  overflow-y: auto;\n+  &::-webkit-scrollbar {\n+    width: 8px;\n+    height: 0;\n+  }\n+}\n+.cus-scroll,\n+.cus-scroll-x,\n+.cus-scroll-y {\n+  &::-webkit-scrollbar-thumb {\n+    background-color: transparent;\n+    border-radius: 4px;\n+  }\n+  &:hover {\n+    &::-webkit-scrollbar-thumb {\n+      background: #bfbfbf;\n+    }\n+    &::-webkit-scrollbar-thumb:hover {\n+      background: var(--primary-color);\n+    }\n+  }\n+}\n+\n"
                 }
             ],
             "date": 1697849863560,
