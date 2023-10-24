@@ -1,7 +1,7 @@
 <template>
   <div class="wh-full flex">
     <div class="m-auto w-420 card-shadow px-32 py-40">
-      <h1 class="text-center">Vue FastAPI Admin</h1>
+      <h1 class="text-center">Vue Simple Admin</h1>
       <n-input
         v-model:value="loginInfo.username"
         autofocus

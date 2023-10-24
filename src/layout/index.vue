@@ -48,7 +48,7 @@
       </header>
       <router-view v-slot="{ Component, route }">
         <transition :key="route.name" name="fade-slide" mode="out-in" appear>
-          <main class="flex-1 h-full bg-#f5f6fb p-24 overflow-auto">
+          <main class="flex-1 h-full bg-#f5f6fb p-24 cus-scroll">
             <component :is="Component" :key="route.fullPath" />
           </main>
         </transition>

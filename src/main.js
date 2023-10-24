@@ -6,6 +6,7 @@ import '@/styles/global.scss'
 import { router } from './router'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import { pmsBtn } from '@/directives'
 import { useUserStore } from './store/user'
 import { usePermissionStore } from './store/permission'
 import { NOT_FOUND_ROUTE } from '@/router/routes'
@@ -20,6 +21,7 @@ const pinia = createPinia()
  */
 pinia.use(piniaPluginPersistedstate)
 app.use(pinia)
+app.directive('pmsBtn', pmsBtn) // 注册按钮权限自定义指令
 
 app.mount('#app')
 
@@ -47,7 +49,7 @@ router.beforeEach(async (to) => {
     // 获取用户信息
     await userStore.getUserInfo()
     // 创建权限路由列表
-    const accessRoutes = permissionStore.generateRoutes(userStore.role)
+    const accessRoutes = permissionStore.generateRoutes(userStore.role?.code)
     // 动态添加有权限的路由
     accessRoutes.forEach((route) => {
       !router.hasRoute(route.name) && router.addRoute(route)
