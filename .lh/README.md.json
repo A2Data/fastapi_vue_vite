@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 33,
+            "activePatchIndex": 34,
             "patches": [
                 {
                     "date": 1697693407036,
@@ -140,6 +140,10 @@
                 {
                     "date": 1697858131385,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,4 +74,5 @@\n > 建议安装vscode插件: Iconify IntelliSense\n \n 10. 简单封装网络请求-axios，配置本地服务接口请求代理（重要）\n \n+11. 完善登录页，并添加路由守卫控制没登录时跳转登录页（非常重要）\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698109577268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,5 +74,9 @@\n > 建议安装vscode插件: Iconify IntelliSense\n \n 10. 简单封装网络请求-axios，配置本地服务接口请求代理（重要）\n \n-11. 完善登录页，并添加路由守卫控制没登录时跳转登录页（非常重要）\n\\ No newline at end of file\n+11. 完善登录页，并添加路由守卫控制没登录时跳转登录页（非常重要）\n+\n+> 注：路由守卫里面每一步都写了详细的注释\n+\n+12. 补充退出登录逻辑\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1697693407036,

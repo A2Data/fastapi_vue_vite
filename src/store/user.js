@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import api from '@/api'
+import { resetRouter, router } from '@/router'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
@@ -25,8 +26,10 @@ export const useUserStore = defineStore('user', {
     setToken(token) {
       this.token = token
     },
-    resetUserInfo() {
+    logout() {
+      resetRouter()
       this.$reset()
+      router.replace('/login')
     },
   },
   // 持久化

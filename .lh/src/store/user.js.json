@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1697855348726,
@@ -12,6 +12,10 @@
                 {
                     "date": 1697858294636,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,33 +1,36 @@\n-// 导入状态管理库的 defineStore 函数\n import { defineStore } from 'pinia'\n+import api from '@/api'\n \n-// 定义名为 'user' 的用户状态管理模块\n export const useUserStore = defineStore('user', {\n-  // 初始状态\n   state: () => ({\n     userInfo: {},\n+    token: undefined,\n   }),\n-\n-  // 定义 getter 来获取用户名\n   getters: {\n     username() {\n       return this.userInfo?.username\n     },\n+    role() {\n+      return this.userInfo?.role\n+    },\n   },\n-\n-  // 定义操作来设置和重置用户信息\n   actions: {\n-    // 设置用户信息\n+    async getUserInfo() {\n+      const { data } = await api.getUserInfo(this.token)\n+      this.setUserInfo(data)\n+    },\n     setUserInfo(userInfo) {\n       this.userInfo = userInfo\n     },\n-    // 重置用户信息\n+    setToken(token) {\n+      this.token = token\n+    },\n     resetUserInfo() {\n-      // 使用内置的 $reset 方法来重置模块的状态\n       this.$reset()\n     },\n   },\n-\n-  // 启用持久化\n-  persist: true,\n+  // 持久化\n+  persist: {\n+    paths: ['token'],\n+  },\n })\n"
+                },
+                {
+                    "date": 1698109692683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { defineStore } from 'pinia'\n import api from '@/api'\n+import { resetRouter, router } from '@/router'\n \n export const useUserStore = defineStore('user', {\n   state: () => ({\n     userInfo: {},\n@@ -24,10 +25,12 @@\n     },\n     setToken(token) {\n       this.token = token\n     },\n-    resetUserInfo() {\n+    logout() {\n+      resetRouter()\n       this.$reset()\n+      router.replace('/login')\n     },\n   },\n   // 持久化\n   persist: {\n"
                 }
             ],
             "date": 1697855348726,

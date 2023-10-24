@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1697853962421,
@@ -28,6 +28,10 @@
                 {
                     "date": 1697854023177,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import { createWebHashHistory } from 'vue-router'\n-import { createRouter } from 'vue-router'\n import { createWebHashHistory, createRouter } from 'vue-router'\n \n import { basicRoutes } from './routes'\n \n"
+                },
+                {
+                    "date": 1698038573953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,31 @@\n-import { createWebHashHistory, createRouter } from 'vue-router'\n-\n+import { createWebHashHistory } from 'vue-router'\n+import { createRouter } from 'vue-router'\n import { basicRoutes } from './routes'\n \n-// 创建路由器实例\n export const router = createRouter({\n-  // 使用 hash 模式的路由历史\n   history: createWebHashHistory('/'),\n-  // 路由配置，这里使用了从 './routes' 导入的基本路由配置\n   routes: basicRoutes,\n-  // 滚动行为配置，每次导航到新路由时将滚动位置重置为左上角\n-\n   scrollBehavior: () => ({ left: 0, top: 0 }),\n })\n+\n+export function resetRouter() {\n+  const basicRouteNames = getRouteNames(basicRoutes)\n+  router.getRoutes().forEach((route) => {\n+    const name = route.name\n+    if (!basicRouteNames.includes(name)) {\n+      router.removeRoute(name)\n+    }\n+  })\n+}\n+\n+function getRouteNames(routes) {\n+  return routes.map((route) => getRouteName(route)).flat(1)\n+}\n+\n+function getRouteName(route) {\n+  const names = [route.name]\n+  if (route.children && route.children.length) {\n+    names.push(...route.children.map((item) => getRouteName(item)).flat(1))\n+  }\n+  return names\n+}\n"
                 }
             ],
             "date": 1697853962421,
