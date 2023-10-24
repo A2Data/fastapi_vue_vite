@@ -4,7 +4,7 @@ import { asyncRoutes, basicRoutes } from '@/router/routes'
 function hasPermission(route, role) {
   const routeRole = route.meta?.role ? route.meta.role : []
   if (!role.length || !routeRole.length) {
-    return false
+    return true
   }
   return role.some((item) => routeRole.includes(item))
 }
