@@ -29,7 +29,7 @@ export const basicRoutes = [
         component: () => import('@/views/home/index.vue'),
         meta: {
           title: '首页',
-          icon: 'i-mdi:home',
+          icon: 'i-me:home?mask',
         },
       },
     ],
@@ -67,7 +67,7 @@ export const asyncRoutes = [
         component: () => import('@/views/test-page/page1.vue'),
         meta: {
           title: '测试页1',
-          icon: 'i-material-symbols:auto-awesome-outline-rounded',
+          icon: 'i-isme:check-circle',
           role: ['admin'],
         },
       },
