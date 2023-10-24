@@ -1,11 +1,5 @@
 <template>
-  <div v-if="userStore.userInfo?.id">
-    <img :src="userStore.userInfo.avatar" alt="avatar" />
-    <p class="mt-12">欢迎您， {{ userStore.username }}</p>
-    <n-button type="primary" ghost @click="userStore.logout">退出登录</n-button>
-  </div>
-
-  <RouterLink v-else to="/login">to login</RouterLink>
+  <p>欢迎您， {{ userStore.username }}</p>
 </template>
 
 <script setup>

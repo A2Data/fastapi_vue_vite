@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 34,
+            "activePatchIndex": 40,
             "patches": [
                 {
                     "date": 1697693407036,
@@ -144,6 +144,30 @@
                 {
                     "date": 1698109577268,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,5 +74,9 @@\n > 建议安装vscode插件: Iconify IntelliSense\n \n 10. 简单封装网络请求-axios，配置本地服务接口请求代理（重要）\n \n-11. 完善登录页，并添加路由守卫控制没登录时跳转登录页（非常重要）\n\\ No newline at end of file\n+11. 完善登录页，并添加路由守卫控制没登录时跳转登录页（非常重要）\n+\n+> 注：路由守卫里面每一步都写了详细的注释\n+\n+12. 补充退出登录逻辑\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1698110617297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,5 +78,9 @@\n 11. 完善登录页，并添加路由守卫控制没登录时跳转登录页（非常重要）\n \n > 注：路由守卫里面每一步都写了详细的注释\n \n-12. 补充退出登录逻辑\n\\ No newline at end of file\n+12. 补充退出登录逻辑\n+\n+13. 完善 layout 之整体布局\n+\n+> 注: 为减少对 UI 组件的依赖，整体布局使用原生 html + unocss 完成，方便切换 UI组件时布局可以复用\n"
+                },
+                {
+                    "date": 1698111234961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,4 +83,9 @@\n \n 13. 完善 layout 之整体布局\n \n > 注: 为减少对 UI 组件的依赖，整体布局使用原生 html + unocss 完成，方便切换 UI组件时布局可以复用\n+>\n+> 14. 完善 layout 之权限菜单（非常重要）\n+\n+> 注: 提供两种生成菜单的方式，详情看 `layout/index.vue`\n+\n"
+                },
+                {
+                    "date": 1698111423310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,8 +84,10 @@\n 13. 完善 layout 之整体布局\n \n > 注: 为减少对 UI 组件的依赖，整体布局使用原生 html + unocss 完成，方便切换 UI组件时布局可以复用\n >\n-> 14. 完善 layout 之权限菜单（非常重要）\n \n+\n+14.  完善 layout 之权限菜单（非常重要）\n+\n > 注: 提供两种生成菜单的方式，详情看 `layout/index.vue`\n \n"
+                },
+                {
+                    "date": 1698111428804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,10 +84,11 @@\n 13. 完善 layout 之整体布局\n \n > 注: 为减少对 UI 组件的依赖，整体布局使用原生 html + unocss 完成，方便切换 UI组件时布局可以复用\n >\n+```bash\n+```\n \n-\n 14.  完善 layout 之权限菜单（非常重要）\n \n > 注: 提供两种生成菜单的方式，详情看 `layout/index.vue`\n \n"
+                },
+                {
+                    "date": 1698111439010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,8 +85,15 @@\n \n > 注: 为减少对 UI 组件的依赖，整体布局使用原生 html + unocss 完成，方便切换 UI组件时布局可以复用\n >\n ```bash\n+\n+\n+[unocss] failed to load icon \"mdi:home\"\n+[unocss] failed to load icon \"uil:pagelines\"\n+[unocss] failed to load icon \"material-symbols:auto-awesome-outline-rounded\"\n+[unocss] failed to load icon \"line-md-menu-unfold-left\"\n+[unocss] failed to load icon \"line-md-menu-fold-left\"\n ```\n \n 14.  完善 layout 之权限菜单（非常重要）\n \n"
+                },
+                {
+                    "date": 1698111739324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,19 +83,6 @@\n \n 13. 完善 layout 之整体布局\n \n > 注: 为减少对 UI 组件的依赖，整体布局使用原生 html + unocss 完成，方便切换 UI组件时布局可以复用\n->\n-```bash\n \n \n-[unocss] failed to load icon \"mdi:home\"\n-[unocss] failed to load icon \"uil:pagelines\"\n-[unocss] failed to load icon \"material-symbols:auto-awesome-outline-rounded\"\n-[unocss] failed to load icon \"line-md-menu-unfold-left\"\n-[unocss] failed to load icon \"line-md-menu-fold-left\"\n-```\n-\n-14.  完善 layout 之权限菜单（非常重要）\n-\n-> 注: 提供两种生成菜单的方式，详情看 `layout/index.vue`\n-\n"
                 }
             ],
             "date": 1697693407036,

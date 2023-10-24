@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/store/permission.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698111177056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698111177056,
+            "name": "Commit-0",
+            "content": "import { defineStore } from 'pinia'\nimport { asyncRoutes, basicRoutes } from '@/router/routes'\n\nfunction hasPermission(route, role) {\n  const routeRole = route.meta?.role ? route.meta.role : []\n  if (!role.length || !routeRole.length) {\n    return true\n  }\n  return role.some((item) => routeRole.includes(item))\n}\n\nfunction filterAsyncRoutes(routes = [], role) {\n  const res = []\n  routes.forEach((route) => {\n    if (hasPermission(route, role)) {\n      const curRoute = {\n        ...route,\n        children: [],\n      }\n      if (route.children && route.children.length) {\n        curRoute.children = filterAsyncRoutes(route.children, role)\n      } else {\n        delete curRoute.children\n      }\n      res.push(curRoute)\n    }\n  })\n  return res\n}\n\nexport const usePermissionStore = defineStore('permission', {\n  state() {\n    return {\n      accessRoutes: [],\n    }\n  },\n  getters: {\n    routes() {\n      return basicRoutes.concat(this.accessRoutes)\n    },\n    menus() {\n      return this.routes.filter((route) => route.name && !route.isHidden)\n    },\n  },\n  actions: {\n    generateRoutes(role = []) {\n      const accessRoutes = filterAsyncRoutes(asyncRoutes, role)\n      this.accessRoutes = accessRoutes\n      return accessRoutes\n    },\n  },\n})\n"
+        }
+    ]
+}

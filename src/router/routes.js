@@ -1,8 +1,16 @@
 export const basicRoutes = [
   {
-    name: 'Home',
+    name: 'Index',
     path: '/',
-    component: () => import('@/views/home/index.vue'),
+    component: () => import('@/layout/index.vue'),
+    redirect: '/home',
+    children: [
+      {
+        name: 'Home',
+        path: 'home',
+        component: () => import('@/views/home/index.vue'),
+      },
+    ],
   },
   {
     name: 'Login',
