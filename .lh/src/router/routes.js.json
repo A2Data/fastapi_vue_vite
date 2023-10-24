@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1697858006442,
@@ -36,6 +36,10 @@
                 {
                     "date": 1698155442823,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         path: 'home',\n         component: () => import('@/views/home/index.vue'),\n         meta: {\n           title: '首页',\n-          icon: 'i-mdi:home',\n+          icon: 'i-me:home?mask',\n         },\n       },\n     ],\n   },\n@@ -66,9 +66,9 @@\n         path: 'page1',\n         component: () => import('@/views/test-page/page1.vue'),\n         meta: {\n           title: '测试页1',\n-          icon: 'i-material-symbols:auto-awesome-outline-rounded',\n+          icon: 'i-isme:check-circle',\n           role: ['admin'],\n         },\n       },\n       {\n"
+                },
+                {
+                    "date": 1698156107596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         path: 'home',\n         component: () => import('@/views/home/index.vue'),\n         meta: {\n           title: '首页',\n-          icon: 'i-me:home?mask',\n+          icon: 'i-mdi:home',\n         },\n       },\n     ],\n   },\n@@ -66,9 +66,9 @@\n         path: 'page1',\n         component: () => import('@/views/test-page/page1.vue'),\n         meta: {\n           title: '测试页1',\n-          icon: 'i-isme:check-circle',\n+          icon: 'i-material-symbols:auto-awesome-outline-rounded',\n           role: ['admin'],\n         },\n       },\n       {\n@@ -92,8 +92,30 @@\n         },\n       },\n     ],\n   },\n+  {\n+    name: 'Demo',\n+    path: '/demo',\n+    component: Layout,\n+    meta: {\n+      title: 'Demo示例',\n+      icon: 'i-fe:app-menu',\n+      role: ['admin', 'test'],\n+    },\n+    children: [\n+      {\n+        name: 'CalendarTodo',\n+        path: 'calendar-todo',\n+        component: () => import('@/views/demo/calendar-todo/index.vue'),\n+        meta: {\n+          title: '日历-Todo',\n+          icon: 'i-fe:feather',\n+          role: ['admin', 'test'],\n+        },\n+      },\n+    ],\n+  },\n ]\n \n export const NOT_FOUND_ROUTE = {\n   name: 'NotFound',\n"
                 }
             ],
             "date": 1697858006442,

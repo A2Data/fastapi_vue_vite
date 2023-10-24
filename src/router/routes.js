@@ -29,7 +29,7 @@ export const basicRoutes = [
         component: () => import('@/views/home/index.vue'),
         meta: {
           title: '首页',
-          icon: 'i-me:home?mask',
+          icon: 'i-mdi:home',
         },
       },
     ],
@@ -67,7 +67,7 @@ export const asyncRoutes = [
         component: () => import('@/views/test-page/page1.vue'),
         meta: {
           title: '测试页1',
-          icon: 'i-isme:check-circle',
+          icon: 'i-material-symbols:auto-awesome-outline-rounded',
           role: ['admin'],
         },
       },
@@ -88,6 +88,28 @@ export const asyncRoutes = [
         meta: {
           title: '测试按钮权限',
           icon: 'i-material-symbols:auto-awesome-outline-rounded',
+          role: ['admin', 'test'],
+        },
+      },
+    ],
+  },
+  {
+    name: 'Demo',
+    path: '/demo',
+    component: Layout,
+    meta: {
+      title: 'Demo示例',
+      icon: 'i-fe:app-menu',
+      role: ['admin', 'test'],
+    },
+    children: [
+      {
+        name: 'CalendarTodo',
+        path: 'calendar-todo',
+        component: () => import('@/views/demo/calendar-todo/index.vue'),
+        meta: {
+          title: '日历-Todo',
+          icon: 'i-fe:feather',
           role: ['admin', 'test'],
         },
       },
