@@ -46,9 +46,13 @@
           </n-dropdown>
         </div>
       </header>
-      <main class="flex-1 h-full bg-#f5f6fb overscroll-auto p-24">
-        <RouterView />
-      </main>
+      <router-view v-slot="{ Component, route }">
+        <transition :key="route.name" name="fade-slide" mode="out-in" appear>
+          <main class="flex-1 h-full bg-#f5f6fb p-24 overflow-auto">
+            <component :is="Component" :key="route.fullPath" />
+          </main>
+        </transition>
+      </router-view>
     </article>
   </div>
 </template>
