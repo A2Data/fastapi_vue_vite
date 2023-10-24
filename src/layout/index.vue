@@ -9,7 +9,6 @@
         <span class="font-bold text-18 text-primary">Logo</span>
       </header>
       <n-menu
-        ref="menu"
         accordion
         :indent="18"
         :collapsed-icon-size="22"
@@ -22,14 +21,29 @@
     </aside>
 
     <article class="w-0 flex-col flex-1">
-      <header class="h-60 flex-shrink-0 flex items-center" border-b="1px solid #efeff5">
-        <div class="f-c-c cursor-pointer text-20 ml-12" @click="appStore.switchCollapsed">
+      <header class="h-60 flex-shrink-0 flex items-center px-24" border-b="1px solid #efeff5">
+        <div class="f-c-c cursor-pointer text-20" @click="appStore.switchCollapsed">
           <i v-if="appStore.collapsed" i-line-md-menu-unfold-left />
           <i v-else i-line-md-menu-fold-left />
         </div>
+        <n-breadcrumb class="ml-12">
+          <n-breadcrumb-item
+            v-for="item in route.matched.filter((item) => !!item.meta?.title)"
+            :key="item.path"
+            @click="handleBreadClick(item.path)"
+          >
+            {{ item.meta.title }}
+          </n-breadcrumb-item>
+        </n-breadcrumb>
         <div class="ml-auto flex items-center">
-          <img :src="userStore.userInfo.avatar" class="h-36 w-36 rounded-full" />
-          <n-button class="mx-12" type="primary" ghost @click="userStore.logout">退出登录</n-button>
+          <n-dropdown :options="dropdownOptions" @select="handleDropSelect">
+            <div class="flex items-center cursor-pointer">
+              <img :src="userStore.userInfo.avatar" class="h-36 w-36 rounded-full" />
+              <span class="ml-12 opacity-80">
+                {{ userStore.userInfo.username }}({{ userStore.userInfo.role?.name }})
+              </span>
+            </div>
+          </n-dropdown>
         </div>
       </header>
       <main class="flex-1 h-full bg-#f5f6fb overscroll-auto p-24">
@@ -51,7 +65,7 @@ const permissionStore = usePermissionStore()
 const router = useRouter()
 const route = useRoute()
 
-const menu = ref(null)
+/************************ 菜单相关的逻辑（建议单独封装抽离出去） ********************************/
 
 const menuOptions = computed(() => {
   return permissionStore.menus.map((item) => getMenuItem(item))
@@ -136,6 +150,38 @@ function handleMenuSelect(key, item) {
     window.open(item.path)
   } else {
     router.push(item.path)
+  }
+}
+
+/******************** 头部相关的逻辑（建议单独封装抽离出去） ******************************/
+
+function handleBreadClick(path) {
+  if (path === route.path) return
+  router.push(path)
+}
+
+const dropdownOptions = [
+  {
+    label: '退出登录',
+    key: 'logout',
+    icon: () => h('i', { class: 'i-mdi:exit-to-app text-14' }),
+  },
+]
+
+function handleDropSelect(key) {
+  if (key === 'logout') {
+    $dialog.info({
+      showIcon: false,
+      title: '提示',
+      type: 'info',
+      content: '确认退出？',
+      positiveText: '确定',
+      negativeText: '取消',
+      onPositiveClick() {
+        userStore.logout()
+        $message.success('已退出登录')
+      },
+    })
   }
 }
 </script>
